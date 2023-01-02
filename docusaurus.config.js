@@ -56,9 +56,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: `Bridger's wiki `,
+        title: `Yunnet wiki `,
         logo: {
-          alt: 'My Site Logo',
+          alt: 'Yunnet logo',
           src: 'img/logo.svg',
         },
         items: [
