@@ -6,18 +6,18 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: '歡迎',
-  tagline: '這是我的維基',
-  url: 'https://wiki.brid.gq',
+  title: '雲科網管wiki',
+  tagline: '這裡專放一些網管的相關資訊',
+  url: 'https://yunnet.brid.gq',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/Yunnet_icon.svg',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'bridgerhung', // Usually your GitHub org/user name.
-  projectName: 'wiki_NYUST', // Usually your repo name.
+  projectName: 'Yunnet_wiki', // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -38,13 +38,9 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
         },
-        blog: {
-          showReadingTime: true,
-          blogSidebarTitle: '所有的日記',
-          blogSidebarCount: 'ALL',
+        blog: false,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-        },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -64,23 +60,22 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: '/category/報告專案',
+            docId: '/category/社團課程資料',
             position: 'left',
-            label: '課程檔案',
+            label: '社團課程資料',
           },
           {
             type: 'doc',
-            docId: '/category/翻譯作品',
+            docId: '/category/宿舍網路',
             position: 'left',
-            label: '我的翻譯作品',
+            label: '宿舍網路',
           },
-          { to: '/blog', label: 'Blog', position: 'left' },
         ],
       },
       footer: {
         style: 'dark',
 
-        copyright: `Copyright © ${new Date().getFullYear()} Bridger`,
+        copyright: `Copyright © ${new Date().getFullYear()} 雲科網管`,
       },
       prism: {
         theme: lightCodeTheme,

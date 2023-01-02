@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="83.945" height="41.988" viewBox="0 0 83.945 41.988">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #2ca05a;
+        stroke: #2ca05a;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+
+      .cls-2 {
+        fill: #37c871;
+        stroke: #37c871;
+      }
+
+      .cls-3 {
+        fill: #87deaa;
+        stroke: #87deaa;
+      }
+    </style>
+  </defs>
+  <g id="Component_8_1" data-name="Component 8 – 1" transform="translate(1 1)">
+    <path id="path4560-16-8-8-0-4-0-8-6-2-1" class="cls-1" d="M40.092,272.8l-4.79,8.3-10.971,19H37.021l10.4-18.009,10.4,18.009H70.5l-10.97-19-4.791-8.3Z" transform="translate(11.441 -260.112)"/>
+    <path id="path4805-2-9-6-5-3-4-0" class="cls-2" d="M33.087,272.8l-3.072,5.321v0L28.3,281.1l-10.971,19H30.016l10.4-18.009,1.719-2.977,3.644-6.313Z" transform="translate(5.757 -260.112)"/>
+    <path id="path4560-16-8-8-0-4-0-8-6-2-3-8" class="cls-3" d="M4.583,265.8l10.4,18.011h0l3.644,6.313,1.719,2.977.981,1.7L14.98,305.782H27.667v0h0l10.4-18.009,1.719-2.977,3.644-6.313L50.754,265.8H38.066L27.669,283.8,17.273,265.8Z" transform="translate(-4.583 -265.796)"/>
+  </g>
+</svg>

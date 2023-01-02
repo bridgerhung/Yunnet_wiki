@@ -4,8 +4,8 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: '這是我的維基，有一些課程的東西，還有我的生活',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: '這是網管的維基，目前放一些社課和相關資料',
+    Svg: require('@site/static/img/Yunnet-light.svg').default,
     description: <></>,
   },
 ];
