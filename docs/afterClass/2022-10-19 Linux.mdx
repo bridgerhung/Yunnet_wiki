@@ -1,0 +1,336 @@
+---
+title: 2022-10-19 Linux
+description: Linux環境基礎教學
+sidebar_position: 3
+---
+
+# Linux！
+
+---
+
+### Linux 是什麼...?
+
+##### 今天來教 Linux 簡易~~食用~~指南
+
+---
+
+### 寫在前面
+
+#### 還記得上次設定的 Super User 密碼嗎?
+
+```bash=
+su #進入超級使用者
+adduser <你的使用者名稱> sudo
+
+passwd # 重設當前使用者的密碼
+```
+
+這樣就取得 sudo 權限啦~
+如果遇到指令執行失敗，加個 sudo 就能解決
+
+---
+
+### 快捷鍵
+
+- `Tab` - 自動補完指令或路徑
+- `Ctrl + C` - 中斷目前的操作(中斷前景程序)
+- `Ctrl + L` - 清理畫面
+  - `clear` - 完全清除
+- `Ctrl + Q` - 清除目前輸入
+- `Ctrl + D` - 離開(等同輸入 exit+enter)
+- `Ctrl + Z` - 將目前程序切換到背景
+  - 延伸閱讀: [Linux 切換 process 至背景或前景作業 – Ctrl + z](https://bit.ly/3VvF4Sy)
+
+---
+
+### 首先建立資料夾
+
+```bash=
+mkdir <資料夾名稱>
+or
+md <資料夾名稱>
+```
+
+- 註: md 是 mkdir 的 alias(別名)
+  - 延伸閱讀: [alias 用法](https://weikaiwei.com/linux/alias-command/)
+
+---
+
+### 然後 摸他(X) 建立檔案(O)
+
+```=bash
+touch <檔案名稱>
+```
+
+![](https://media.tenor.com/tikIIf6NJvEAAAAC/cat-sleep.gif)
+好摸一直摸<3
+
+---
+
+### 再來看看自己在哪
+
+```bash=
+(Print Working Directory)
+pwd
+```
+
+~~我怎麼會知道~~
+
+---
+
+### 找找自己附近有什麼
+
+```bash=
+(list)
+ls
+ls -lah
+
+-l # 顯示詳細資訊
+-a # 顯示隱藏檔案
+-h # 方便閱讀
+```
+
+~~好多剛剛創的垃圾~~
+
+---
+
+### 接著...幹掉他們！
+
+```bash=
+(remove)
+rm <檔案名稱>
+rm -rf <任何東西>
+
+-r # recursive 遞迴刪除
+-f # force     強制刪除 (非常危險！)
+```
+
+~~順手丟垃圾，愛護環境~~
+
+---
+
+### 結合 ls，我們到其他地方玩玩
+
+```bash=
+cd /
+ls
+
+(Change Directory)
+cd <目錄>
+
+~  # 使用者的"家"目錄
+.  # 當前目錄
+.. # 上層目錄
+/  # 根目錄 or 一層目錄
+```
+
+如果亂跑迷路了，輸入`cd ~`就好
+
+---
+
+### 聽話！讓我看看！
+
+是卯迷
+
+```bash=
+cat <檔案名稱>
+```
+
+~
+一頁一頁看，而不是全部噴出來(按 Q 離開)
+
+```bash=
+less <檔案名稱>
+```
+
+可以拿 `/etc/passwd` 試試看喔~
+
+---
+
+### 不僅要看，我還想實際對它壞壞
+
+CLI 下的文字編輯器
+
+```bash=
+nano <檔案名稱>
+vi <檔案名稱>
+vim <檔案名稱>
+```
+
+vim 是 vi 的升級版
+~~個人比較推薦 nano~~
+
+---
+
+### 除了創造及刪除...
+
+### 或許我們可以試試抄襲與偷竊！
+
+```bash=
+(copy)
+cp <抄襲目標> <目的地>
+
+(move)
+mv <偷竊目標> <目的地>
+
+詳細使用方式可以在指令後方加入--help查詢
+```
+
+~~以後的論文會寫了~~
+
+---
+
+### 快要結束了 各位撐住
+
+摸摸卯迷休息一下
+![](https://media.tenor.com/tikIIf6NJvEAAAAC/cat-sleep.gif)
+
+---
+
+### ECHO 迴聲
+
+把你打的字重複一遍
+你可能會想問...這到底有什麼用?
+
+```bash=
+echo <任何字>
+echo $PATH
+```
+
+可以顯示環境變數
+或者...?
+
+---
+
+### 隆重介紹 Standard Stream！
+
+讓我們把`echo`的輸出導向至檔案！
+
+```bash=
+>  寫入(rewrite)
+>> 追加寫入(append)
+# 箭頭可反向操作 <, <<
+
+echo hello world！ > 123.txt
+cat 123.txt
+```
+
+任何有輸出的可以試試看喔~
+
+- 延伸閱讀: [Linux Fundamentals - I/O, Standard Streams, and Redirection.](https://www.putorius.net/linux-io-file-descriptors-and-redirection.html)
+
+---
+
+### 搜尋神器！ grep
+
+還記得用`cat`顯示過`/etc/passwd`的內容嗎?
+我只想查看 root 的資訊怎麼辦?
+
+```bash=
+cat /etc/passwd | grep root
+```
+
+grep 的比對是用 Regular Expression(正規表達式)
+有興趣的可以去看看詳細規則~
+
+- 延伸閱讀: [正規表達式](https://bit.ly/2RfSNuC)
+- 延伸閱讀: [Linux 匹配文字 grep 指令用法](https://blog.gtwang.org/linux/linux-grep-command-tutorial-examples/)
+
+---
+
+### 雜項
+
+##### 看看有誰登入
+
+```bash=
+who
+who -a
+```
+
+##### 自己長怎樣
+
+```bash=
+id
+```
+
+##### 查看執行檔在哪
+
+```bash=
+which <任何指令>
+whereis <任何指令>
+# 任何指令 例如ls、cat、apt等等
+```
+
+---
+
+### 我檔案忘記放在哪了怎麼辦? QQ
+
+```bash=
+find <搜尋位置> -name <名稱>
+```
+
+可以試試看在**根目錄**搜尋**hosts**檔案
+
+- 延伸閱讀: [使用 find 指令查詢目錄與檔案的速查筆記](https://blog.miniasp.com/post/2010/08/27/Linux-find-command-tips-and-notice)
+
+---
+
+### SSH?
+
+##### Secure Shell Protocol
+
+一種安全的傳輸協定
+常用於遠端連線
+
+```bash=
+ssh <帳號@IP> -p <端口號(預設22)>
+
+馬上來試試看吧
+ssh LetMeIn@Anong.moe
+密碼 zxcvbasdfgqwert12345
+```
+
+- 延伸閱讀: [學習 SSH：選項和配置參數](https://bit.ly/3TuGL0v)
+
+---
+
+### SCP?
+
+##### 不是控制，收容，保護的組織喔
+
+##### 全名 Secure Copy
+
+基於 SSH 進行 CP(複製檔案)
+
+```bash=
+scp <帳號@IP>:<檔案位置> <目標帳號@IP>:<目錄位置>
+
+# 如果是從本機複製至遠端電腦可省略本機帳號、IP與冒號
+scp <檔案位置> <遠端帳號@IP>:<遠端目錄位置>
+scp <遠端帳號@IP>:<遠端檔案位置> <本機目錄位置>
+```
+
+---
+
+### 以上這些對你來說太簡單了?
+
+[> 線上挑戰 <](https://cmdchallenge.com/)
+
+##### 試試看吧
+
+---
+
+另外如果對 Linux 想了解更多的
+歡迎修資管下學期的**作業系統操作與管理**喔~
+**遠距+非同步教學**
+不僅能學東西還很營養 (非業配
+[**課程介紹**](https://webapp.yuntech.edu.tw/WebNewCAS/Course/Plan/Query.aspx?&110&2&3129)
+
+---
+
+# END
+
+今天就到這邊啦~
+
+> 話說各位吃過豆花嗎?
+> 推薦龍潭路的可口
