@@ -3,17 +3,24 @@ title: 2022-10-19 git
 description: git 版本控制
 sidebar_position: 4
 ---
+
 :::info
-## [原始PPT by 梓安](https://drive.brid.cf/d/Microsoft/yuntech/0.%20%E8%AA%B2%E7%A8%8B%E8%B3%87%E6%96%99/1.%20%E4%B8%80%E5%B9%B4%E7%B4%9A%E4%B8%8A%E5%AD%B8%E6%9C%9F/3.9%20%E7%B6%B2%E8%B7%AF%E7%AE%A1%E7%90%86/10.26%20Git/Git_.pptx)
+
+## [原始 PPT by 梓安](https://drive.brid.cf/d/Microsoft/yuntech/0.%20%E8%AA%B2%E7%A8%8B%E8%B3%87%E6%96%99/1.%20%E4%B8%80%E5%B9%B4%E7%B4%9A%E4%B8%8A%E5%AD%B8%E6%9C%9F/3.9%20%E7%B6%B2%E8%B7%AF%E7%AE%A1%E7%90%86/10.26%20Git/Git_.pptx)
+
 :::
-## Git 用在哪裡​
+
+## Git 用在哪裡 ​
+
 ### 你是不是也曾幹過這種事?
+
 ![無限複製](https://i.imgur.com/v5DfEhh.jpg)
 :::tip
 **Git 派上用場了!**
 :::
 
-# 甚麼是git?
+# 甚麼是 git?
+
 :::info
 Git 是一個 「分散式的版本控制系統」
 :::
@@ -22,11 +29,102 @@ Git 是一個 「分散式的版本控制系統」
 :::
 
 ## Git 的基本運作
+
 ### 處理檔案的方式
+
 ![處理檔案的方式](https://i.imgur.com/vaIah88.jpg)
-### 但git 就不同了
+
+### 但 git 就不同了
+
 ![但git 就不同了](https://i.imgur.com/AHfBBzM.jpg)
+
 #### 工作區、暫存區與儲存庫
+
 ![工作區、暫存區與儲存庫](https://i.imgur.com/0HvQ2zS.jpg)
+
 #### 多人協作
+
 ![多人協作](https://i.imgur.com/CgdPTAa.jpg)
+
+## Git 的安裝
+
+### Windows 版
+
+:::tip
+[下載連結](https://git-scm.com/download/win)
+:::tip
+![安裝照片](https://i.imgur.com/sSgQv4f.jpg)
+
+### MAC 版
+
+![MAC 版git 安裝](https://i.imgur.com/FLu1OmG.png)
+
+### Linux 版
+
+```
+sudo apt-get install git
+```
+
+## Git 的基礎使用
+
+### git clone 從 github 拉取東西下來
+
+```
+git clone
+```
+
+### git 初始化
+
+:::note
+從來沒用過
+所以初始化一下吧!
+:::
+
+```
+git init
+```
+
+### Git 目前的狀態
+
+:::tip
+顯示目前 Git 所在分支與工作區狀態
+:::
+
+```
+git status
+```
+
+### Git 顯示從古至今的 commit
+
+:::tip
+顯示目前 Git 所有過往的 commit  
+(提交)
+:::
+
+```
+git log --oneline --graph --decorate --all
+```
+
+## Git repo 的操作
+
+:::info
+針對 repository 的基本操作
+:::
+
+### 把檔案加入暫存區
+
+:::info
+加進去了才能管理~~
+:::
+
+1. 塞進去暫存區
+
+```
+git add <file_name>
+```
+
+2. 後悔了，從暫存區拿出來
+
+```
+git rm --cached <file>
+```
