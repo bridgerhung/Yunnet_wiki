@@ -39,8 +39,8 @@ const config = {
           // Remove this to remove the "edit this page" links.
         },
         blog: false,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
+        // Please change this to your repo.
+        // Remove this to remove the "edit this page" links.
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -50,7 +50,7 @@ const config = {
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    
+
     ({
       navbar: {
         title: `Yunnet wiki `,
@@ -83,13 +83,13 @@ const config = {
         darkTheme: darkCodeTheme,
       },
       algolia: {
-        apiKey: "f495c55f601ecb2c96135af71b3d970c",
-        indexName: "NYUST_wiki",
-        appId: "NP1WMCL2NC",
+        apiKey: 'f495c55f601ecb2c96135af71b3d970c',
+        indexName: 'netlify_26432c7f-f0e5-4e0e-b032-cca808867a70_main_all',
+        appId: 'NP1WMCL2NC',
         contextualSearch: true,
         externalUrlRegex: 'external\\.com|domain\\.com',
         replaceSearchResultPathname: {
-          from: '/docs/', 
+          from: '/docs/',
           to: '/',
         },
         searchParameters: {},
