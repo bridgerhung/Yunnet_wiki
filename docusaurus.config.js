@@ -50,6 +50,7 @@ const config = {
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+    
     ({
       navbar: {
         title: `Yunnet wiki `,
@@ -80,6 +81,11 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+      },
+      algolia: {
+        apiKey: "54dc6a0f5dd5308d8f0f6acba2886e47",
+        indexName: "NYUST_wiki",
+        appId: "KWYDOXEBCW",
       },
     }),
 };
