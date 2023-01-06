@@ -46,14 +46,10 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
           [
-            require.resolve("@easyops-cn/docusaurus-search-local"),
-            /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
+            require.resolve("@easyops-cn/docusaurus-search-local")
             ({
-              // ... Your options.
-              // `hashed` is recommended as long-term-cache of index file is possible.
               hashed: true,
               language: ["en", "zh"],
-              
             }),
           ],
         },
