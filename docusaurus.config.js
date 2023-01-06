@@ -5,7 +5,7 @@ const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
-/** @type {import("@easyops-cn/docusaurus-search-local") */
+
 const config = {
   title: '雲科網管wiki',
   tagline: '這裡專放一些網管的相關資訊',
@@ -32,7 +32,7 @@ const config = {
     [
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
-      /** @type {import("@easyops-cn/docusaurus-search-local") */
+
       ({
         docs: {
           routeBasePath: '/',
@@ -52,7 +52,7 @@ const config = {
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
+
     ({
       navbar: {
         title: `Yunnet wiki `,
@@ -91,8 +91,9 @@ const config = {
         replaceSearchResultPathname: {
           from: '/docs/', // or as RegExp: /\/docs\//
           to: '/',
-        searchParameters: {},
-        searchPagePath: 'search',
+          searchParameters: {},
+          searchPagePath: 'search',
+        },
       },
     }),
 };
