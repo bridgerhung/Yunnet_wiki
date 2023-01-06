@@ -86,8 +86,6 @@ const config = {
         apiKey: 'f495c55f601ecb2c96135af71b3d970c',
         indexName: 'netlify_26432c7f-f0e5-4e0e-b032-cca808867a70_main_all',
         appId: 'NP1WMCL2NC',
-        searchParameters: {},
-        searchPagePath: 'search',
       },
     }),
 };
