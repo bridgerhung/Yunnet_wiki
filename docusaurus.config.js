@@ -83,9 +83,9 @@ const config = {
         darkTheme: darkCodeTheme,
       },
       algolia: {
-        apiKey: '3b8a8219d5001a5dbcf9163d60a986ed',
-        indexName: 'yunnet',
-        appId: 'J94A3O024B',
+        apiKey: 'bf92cdb5b1850bb199db2a2d95e51d9e',
+        indexName: 'Crawler Netlify - yunnet',
+        appId: 'CQDWJ03MCR',
       },
     }),
 };

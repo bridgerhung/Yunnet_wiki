@@ -1,5 +1,5 @@
 {
-  "index_name": "yunnet",
+  "index_name": "Crawler Netlify - yunnet",
   "start_urls": ["https://yunnet.brid.gq/"],
   "sitemap_urls": ["https://yunnet.brid.gq/sitemap.xml"],
   "sitemap_alternate_links": true,
