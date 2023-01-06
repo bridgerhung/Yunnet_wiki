@@ -86,6 +86,14 @@ const config = {
         apiKey: "54dc6a0f5dd5308d8f0f6acba2886e47",
         indexName: "NYUST_wiki",
         appId: "KWYDOXEBCW",
+        contextualSearch: true,
+        externalUrlRegex: 'external\\.com|domain\\.com',
+        replaceSearchResultPathname: {
+          from: '/docs/', 
+          to: '/',
+        },
+        searchParameters: {},
+        searchPagePath: 'search',
       },
     }),
 };
