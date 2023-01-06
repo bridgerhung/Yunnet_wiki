@@ -43,12 +43,7 @@ const config = {
         // Remove this to remove the "edit this page" links.
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
-          [
-            require.resolve("@easyops-cn/docusaurus-search-local"),
-            {
-              hashed: true,
-            },
-          ],
+        },
       }),
     ],
   ],
@@ -87,16 +82,11 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
-      
+      plugins: [
+        // ...
+        '@aldridged/docusaurus-plugin-lunr',
+      ],
     }),
 };
-themes: [
-  [
-    require.resolve("@easyops-cn/docusaurus-search-local"),
-    {
-      hashed: true,
-    },
-  ],
-],
 
 module.exports = config;
