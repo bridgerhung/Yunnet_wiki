@@ -87,11 +87,6 @@ const config = {
         indexName: 'netlify_26432c7f-f0e5-4e0e-b032-cca808867a70_main_all',
         appId: 'NP1WMCL2NC',
         contextualSearch: true,
-        externalUrlRegex: 'external\\.com|domain\\.com',
-        replaceSearchResultPathname: {
-          from: '/docs/',
-          to: '/',
-        },
         searchParameters: {},
         searchPagePath: 'search',
       },
