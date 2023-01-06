@@ -1,0 +1,482 @@
+---
+title: VueWebApp
+sidebar_position: 2
+description: 前端網頁建置
+---
+
+:::info
+[原始 MD by 育成&承軒](https://hackmd.io/@yunnet-tutorials/vue-web-app#/)
+:::
+
+## 本日目標
+
+![](https://i.imgur.com/9Ge9l0C.png)
+
+---
+
+## 自我介紹
+
+### 王育成
+
+- 電子二 A
+- 文書組
+- 系統組
+
+---
+
+### 何承軒
+
+- _前_ 電子一 A
+- 北科高中 電子一甲 班代
+- [用網頁做的備審資料](https://drive.google.com/file/d/1C_dTz-TnsKJYczgqQm3sTN5qLJmLHk8J/view?usp=share_link)
+- Discord: WeedForFustice#0744
+
+---
+
+## 前置作業
+
+- 安裝 [Node.js](https://nodejs.org/zh-tw/)
+- 下載 [範本](https://github.com/chenghsuanhe/yunnet-todos/tree/template)
+- `$ npm install` <!-- 安裝依賴套件 -->
+- `$ npm run dev` <!-- 預覽網頁 -->
+
+Note:
+Node.js：JavaScript 執行環境（類似瀏覽器）
+範本：設定完成的 To-do List 範本
+
+---
+
+## 為什麼要安裝 Node.js？
+
+- JavaScript 是一種直譯式程式語言
+- 通常由瀏覽器（前端）下載執行
+- Node.js 讓 JavaScript 在伺服器（後端）執行
+- Vue 的開發工具是用 JavaScript 編寫的
+
+---
+
+## Vue
+
+- 漸進式 JavaScript 框架
+- 容易上手，市佔率第二
+- 類似 React、Angular
+
+---
+
+### 專案的目錄結構
+
+![](https://i.imgur.com/OPoJXjv.png)
+
+Note:
+
+- .vscode: VSCode 的設定
+- node_modules: 專案用到的程式庫
+- **src**: 網頁原始碼
+- assets: 網頁字元，如圖片、樣式
+- **App.vue**: 網站的最上層
+
+---
+
+### 單文件元件 (SFC)
+
+```html
+<!-- JavaScript -->
+<script setup>
+</script>
+
+<!-- HTML -->
+<template>
+  <p>Hello, world!</p>
+</template>
+
+<!-- CSS -->
+<style scoped>
+</style>
+```
+
+Note:
+在 `<script setup>` 中：
+
+- 建立變數即是 data
+- 建立函式即是 methods
+  在這後面的 Vue 部分盡晚提到
+
+---
+
+### 響應式變數 `ref`
+
+<!-- - 提供`<script>`裡的資料給模板使用 -->
+
+- 同步一個元件 (component) 中的資料
+- 需要先 `import`
+- 照常宣告變數，將值用`ref()`包起來
+- 在`<script>`中使用需要加上`.value`
+
+```html
+<script setup>
+import { ref } from "vue"
+const reactiveNumber = ref(69)
+reactiveNumber.value += 1
+</script>
+
+<template>
+    <p>Number is {{ reactiveNumber }}</p>
+</template>
+```
+
+Note:
+在模板 (template, HTML) 中使用 JS：
+
+- 在文件中插入值使用雙大括號
+- 在任何 Vue 指令（以 `v-` 開頭的標籤屬性）中
+
+---
+
+### 在模板中響應式變數
+
+- `v-bind` 使 `id` 屬性和 `dynamicId` 資料同步
+- `v-model` 同步輸入欄位內容和資料
+
+```html=
+<div id="1"></div>
+<div v-bind:id="dynamicId"></div>
+<input v-model="userInput"></input>
+```
+
+Note:
+1: id 是常數
+2: id 隨著 dynamicId 變動
+`v-model` 的原理 BJ4
+
+---
+
+### 利用元件 (components) 事半工倍
+
+- 模組化網站：便於管理
+- 在 `components/` 目錄建立新檔案
+- 在 `App.vue` 中匯入
+
+![](https://vuejs.org/assets/components.7fbb3771.png)
+
+Note:
+做完 `Note.vue` 再教 `v-for`
+
+---
+
+### 用迴圈產生重複性的內容
+
+- `v-for` 屬性從陣列產生內容
+
+```html
+<script setup>
+const items = ref([{ message: 'Foo' }, { message: 'Bar' }])
+</script>
+
+<template>
+    <li v-for="item in items">
+      {{ item.message }}
+    </li>
+</template>
+```
+
+---
+
+## HTML
+
+- HyperText Markup Language，超文本標記語言
+- 用 `<標籤>` 標記網頁內容
+
+![](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started/grumpy-cat-small.png)
+
+Note:
+HTML（HyperText Markup Language，超文本標記語言）是打造網頁的基石。它表述並定義網頁的內容。「超文本」（HyperText）是指從某個網頁連到其他網頁的連結
+
+HTML 文件中的元素和其他內容文字不同的地方，在於元素名稱本身用「<」與「>」包圍，稱作「標籤」。HTML 標籤不分英文大小寫。也就是說，它們可以寫成英文全大寫、全小寫、或是混在一起。像是 `<title>` 能寫成 `<Title>`,`<TiTlE>`……等等。
+
+---
+
+### 標題和段落
+
+- `<h1>` 到 `<h6>`
+  - `<h1>` 代表主標題
+  - `<h2>` 代表副標題
+  - `<h3>` 代表更次級的副標題, 依此類推
+- `<p>` 代表一個段落 (paragraph)
+
+![](https://after-school-assets.s3.amazonaws.com/h1-h6.png)
+
+---
+
+### 粗體與斜體
+
+- `<em>` (emphasis) 會使內容變成*斜體*
+- `<strong>` 會使內容變成**粗體**
+
+---
+
+### 區塊與行內
+
+- 區塊
+  - 預設以換行表現
+  - 伸展到完整寬度
+  - 如 `<h1>`、`<p>`
+  - 通用標籤是 `<div>`
+- 行內
+  - 預設不會換行
+  - 伸展到完整寬度
+  - 如 `<em>`、`<strong>`
+  - 通用標籤是 `<span>`
+
+Note:
+通用標籤是沒有語意，結構、樣式用途的元素
+
+---
+
+### 範例
+
+![](https://i.imgur.com/83GT8zG.png)
+
+Note:
+[來源](https://developer.mozilla.org/zh-TW/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#%E5%AF%A6%E4%BD%9C%E6%9E%B6%E6%A7%8B%E5%8C%96%E9%9A%8E%E5%B1%A4)
+
+### HTML5 語意標籤
+
+|    元素     |           意義           |
+| :---------: | :----------------------: |
+| `<header>`  |  網頁的標頭，如網站標題  |
+|   `<nav>`   |     網頁的選單、導覽     |
+|  `<main>`   |      網頁的主要內容      |
+|  `<aside>`  |   網頁的側欄、附加內容   |
+| `<article>` |       一篇文章內容       |
+| `<section>` |  一個區塊，如標題+段落   |
+| `<footer>`  | 網頁的頁尾，如著作權宣告 |
+
+Note:
+實作時再解釋用法，對螢幕閱讀器（無障礙）有幫助
+-->
+
+---
+
+## CSS
+
+- 樣式規則的語言
+- 階層樣式表 (Cascading Style Sheets)
+- ![](https://i.imgur.com/MW2675d.png)
+
+---
+
+### 盒子模型
+
+- `padding` : 內容周圍的空格，如段落文字周圍
+- `border`: 位於矩形內容外部的實線
+- `margin`: 元素外部的空間
+
+![](https://i.imgur.com/kQung2x.png)
+
+---
+
+### 字體
+
+|     語法      |        意義         |
+| :-----------: | :-----------------: |
+|  `font-size`  |     字體的大小      |
+| `font-weight` |  字體的粗細(寬度)   |
+| `font-family` |     字體的字型      |
+| `font-style`  | 字體的樣式(EX:斜體) |
+
+#### 範例
+
+![](https://i.imgur.com/NKx0AH3.png)
+-->
+
+---
+
+### 排版方式
+
+- `display` :布局方式
+  - `display: block` — 元素之前跟之後會換行
+  - `display: inline` — 行內元素，不換行
+  - `display: flex` — 彈性盒子
+
+---
+
+### 顏色更改
+
+- `color` — 改變物體（字）的顏色
+- `background-color` — 改變背景的顏色
+- 可以直接打顏色的英文名稱或它的色碼
+- 可以使用不同的格式，如\
+  `#3Bff87`或`rgb(59, 255, 135)`
+
+---
+
+### 滑鼠游標
+
+- `cursor`
+  ![](https://i.imgur.com/yBn2pHL.png)
+
+---
+
+### 邊框
+
+- `border-radius` : 可以改變邊框的弧度
+  ![](https://i.imgur.com/xnyZr1G.png)
+
+---
+
+## JavaScript
+
+- 簡稱 JS
+<!--- 腳本或叫程式語言 -->
+
+```
+<p>
+  <img
+    src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+    style="width: 25%"
+  />
+</p>
+```
+
+---
+
+### 變數
+
+- `const` 宣告一個常數
+- `let` 宣告一個變數
+
+```js
+const nice = 69; // 必須設定值
+let foo = 'such wow';
+alert(foo); // such wow
+```
+
+---
+
+### 函式
+
+一個函式的定義由一系列的函式關鍵詞組成, 依次為：
+
+- 函式的名稱。
+- `()`中，並由逗號區隔的一個函式參數列表。
+- `{}`中，用於定義函式功能的一些語句。
+
+```js
+function square(number) {
+  return number * number;
+}
+```
+
+---
+
+### 陣列
+
+- 以`[]`表示
+- 用於儲存一系列的資料
+
+```js
+let animals = ['cat', 'dog', 'fish'];
+for (const animal in animals) {
+  alert(animal);
+}
+
+// OR
+for (let i = 0; i < animals.length; i++) {
+  alert(animals[i]);
+}
+
+// cat
+// dog
+// fish
+```
+
+---
+
+### 物件
+
+- 以`{}`表示
+
+```js
+var person = {
+  name: ['Bob', 'Smith'],
+  age: 32,
+  gender: 'male',
+  interests: ['music', 'skiing'],
+  bio: function () {
+    alert(
+      this.name[0] +
+        ' ' +
+        this.name[1] +
+        ' is ' +
+        this.age +
+        ' years old. He likes ' +
+        this.interests[0] +
+        ' and ' +
+        this.interests[1] +
+        '.'
+    );
+  },
+  greeting: function () {
+    alert("Hi! I'm " + this.name[0] + '.');
+  },
+};
+```
+
+---
+
+## QA 時間
+
+---
+
+### Q1(100 分) :
+
+`<h1>` 跟 `<h6>` 哪個字比較大?
+
+---
+
+### Q2(250 分) :
+
+`<title>` 跟 `<TiTLe>` 在 HTML 中意思一樣嗎?
+
+---
+
+### Q3(250 分) :
+
+`font-family` 是做甚麼用的
+
+---
+
+### Q4(250 分) :
+
+如果`<input>`中輸入 `Oscar`
+`<p>` 的內容會是什麼？
+
+```html=
+<script setup>
+import { ref } from 'vue';
+const name = ref("Riley")
+</script>
+
+<template>
+  <label>Your name: <input v-model="name" type="text"></label>
+  <p>Hello, {{ name }}!</p>
+</template>
+```
+
+---
+
+### Q5(300) :
+
+為什麼 `name` 用 `const` 宣告但卻可以改變？
+
+---
+
+### Q6(250) :
+
+請說出盒子模型是甚麼?
+
+---
+
+### Q7(300 分) :
+
+替代文字有甚麼用處?
