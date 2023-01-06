@@ -1,83 +1,121 @@
 const buildType = process.env.BUILD_TYPE;
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-
 module.exports = {
-  title: "雲科網管wiki",
+  title: "Docusaurus Search",
   tagline:
-    "這裡專放一些網管的相關資訊",
+    "An offline/local search example using @easyops-cn/docusaurus-search-local",
   url: "https://easyops-cn.github.io",
+  baseUrl: buildType === "preview" ? "/" : "/docusaurus-search-local/",
+  onBrokenLinks: "throw",
   favicon: "img/favicon.ico",
-  baseUrl: '/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/Yunnet_icon.svg',
-  organizationName: 'bridgerhung', 
-  projectName: 'Yunnet_wiki', 
+  organizationName: "easyops-cn", // Usually your GitHub org/user name.
+  projectName: "docusaurus-search-local", // Usually your repo name.
   i18n: {
-    defaultLocale: 'zh-Hant',
-    locales: ['zh-Hant'],
+    defaultLocale: "en",
+    locales: ["en", ...(buildType === "i18n" ? ["zh-CN", "zh-TW"] : [])],
   },
-  
-  themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
-    ({
-      navbar: {
-        title: `Yunnet wiki `,
-        logo: {
-          alt: 'Yunnet logo',
-          src: 'img/logo.svg',
+  themeConfig: {
+    navbar: {
+      title: "Docusaurus Search",
+      logo: {
+        alt: "My Site Logo",
+        src: "img/logo.svg",
+      },
+      items: [
+        {
+          to: "docs/",
+          activeBasePath: "docs",
+          label: "Docs",
+          position: "left",
         },
-        items: [
-          {
-            type: 'doc',
-            docId: '/category/社團課程資料',
-            position: 'left',
-            label: '社團課程資料',
-          },
-          {
-            type: 'doc',
-            docId: '/category/宿舍網路',
-            position: 'left',
-            label: '宿舍網路',
-          },
-        ],
-      },
-      footer: {
-        style: 'dark',
-
-        copyright: `Copyright © ${new Date().getFullYear()} 雲科網管`,
-      },
-      prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
-      },
-    }),
-};
-
+        { to: "blog", label: "Blog", position: "left" },
+        {
+          href: "https://github.com/easyops-cn/docusaurus-search-local",
+          label: "GitHub",
+          position: "right",
+        },
+        {
+          type: "localeDropdown",
+          position: "right",
+        },
+        {
+          type: "docsVersionDropdown",
+          position: "right",
+        },
+      ],
+    },
+    footer: {
+      style: "dark",
+      links: [
+        {
+          title: "Docs",
+          items: [
+            {
+              label: "Style Guide",
+              to: "docs/",
+            },
+            {
+              label: "Second Doc",
+              to: "docs/doc2/",
+            },
+          ],
+        },
+        {
+          title: "Community",
+          items: [
+            {
+              label: "Stack Overflow",
+              href: "https://stackoverflow.com/questions/tagged/docusaurus",
+            },
+            {
+              label: "Discord",
+              href: "https://discordapp.com/invite/docusaurus",
+            },
+            {
+              label: "Twitter",
+              href: "https://twitter.com/docusaurus",
+            },
+          ],
+        },
+        {
+          title: "More",
+          items: [
+            {
+              label: "Blog",
+              to: "blog",
+            },
+            {
+              label: "GitHub",
+              href: "https://github.com/easyops-cn/docusaurus-search-local",
+            },
+          ],
+        },
+      ],
+      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+    },
+  },
   presets: [
     [
-      'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
+      "@docusaurus/preset-classic",
+      {
         docs: {
-          routeBasePath: '/',
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
+          editUrl:
+            "https://github.com/easyops-cn/docusaurus-search-local/edit/master/website/",
         },
-        blog: false,
-        // Please change this to your repo.
-        // Remove this to remove the "edit this page" links.
+        blog: {
+          showReadingTime: true,
+          // Please change this to your repo.
+          editUrl:
+            "https://github.com/easyops-cn/docusaurus-search-local/edit/master/website/",
+        },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve("./src/css/custom.css"),
         },
-      }),
+      },
     ],
   ],
-
   themes: [
     [
       "@easyops-cn/docusaurus-search-local",
