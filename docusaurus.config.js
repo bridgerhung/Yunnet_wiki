@@ -83,9 +83,9 @@ const config = {
         darkTheme: darkCodeTheme,
       },
       algolia: {
-        apiKey: "54dc6a0f5dd5308d8f0f6acba2886e47",
+        apiKey: "f495c55f601ecb2c96135af71b3d970c",
         indexName: "NYUST_wiki",
-        appId: "KWYDOXEBCW",
+        appId: "NP1WMCL2NC",
         contextualSearch: true,
         externalUrlRegex: 'external\\.com|domain\\.com',
         replaceSearchResultPathname: {
