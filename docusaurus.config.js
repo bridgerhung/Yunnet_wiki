@@ -84,6 +84,16 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
+      algolia: {
+        appId: 'netlify_26432c7f-f0e5-4e0e-b032-cca808867a70_main_all',
+        apiKey: 'bf92cdb5b1850bb199db2a2d95e51d9e',
+        indexName: 'CQDWJ03MCR',
+        replaceSearchResultPathname: {
+          from: '/docs/', // or as RegExp: /\/docs\//
+          to: '/',
+        searchParameters: {},
+        searchPagePath: 'search',
+      },
     }),
 };
 
