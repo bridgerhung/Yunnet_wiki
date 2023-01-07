@@ -1,6 +1,12 @@
 ---
-tags: YunNET
+title: SQL II
+sidebar_position: 2
+description: 	SQL II
 ---
+
+:::info
+[原始 MD by 珉萁](https://hackmd.io/@minouo/BJcrk3l-q)
+:::
 
 ~~MySQL從刪庫到跑路~~
 # SQL II 基礎MySQL

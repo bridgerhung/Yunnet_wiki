@@ -1,4 +1,13 @@
-# typescript
+---
+title: typescript
+sidebar_position: 3
+description: typescript
+---
+
+:::info
+[原始 MD by 咏陞](https://hackmd.io/@lxIxxk-uRO28KO5slEfMgQ/r1YMprty5#/)
+:::
+
 ###### tags: `教學`
 
 ----

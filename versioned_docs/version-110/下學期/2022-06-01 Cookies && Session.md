@@ -1,8 +1,12 @@
 ---
-tags: YunNET
-slideOptions:
-  transition: slide
+title: Cookies/Session
+sidebar_position: 11
+description: Cookies/Session
 ---
+
+:::info
+[原始 MD by 珉萁](https://hackmd.io/@minouo/SyzYvBZ_q#/)
+:::
 
 # Cookies && Session
 *Min*
