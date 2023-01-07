@@ -37,8 +37,12 @@ const config = {
         docs: {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
-          lastVersion: 'current',
-
+          lastVersion: '110',
+          versions: {
+            current: {
+              label: '111',
+              path: '/docs',
+            },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
         },
