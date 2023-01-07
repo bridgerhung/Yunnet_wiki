@@ -1,0 +1,229 @@
+---
+title: 進階 SQL
+sidebar_position: 4
+description: 	進階SQL
+---
+
+:::info
+[原始 MD by 子軒](https://hackmd.io/@XMRHRX/HyovPkEzd#/)
+:::
+
+
+---
+title: SQL 3/4 進階SQL
+---
+## 進階 SQL
+### 2020/3/24
+
+<!-- 
+https://dbdiagram.io/home
+
+3.進階 SQL & SQL 查詢練習/挑戰
+
+INNER JOIN
+UNION SELECT
+畫diagram
+-->
+
+---
+
+## 課程上到這裡
+### 是不是覺得SQL好像也沒什麼特別的？（笑
+
+NOTE:今天來說說SQL相對傷腦的、需要更像數學集合一樣思維的用法。
+
+----
+
+### 如果我今天想要...
+##### 用A表內容更新B表..
+##### 刪掉C表內，有出現在D表的內容...
+
+NOTE:這種表表之間的複雜關係，讓SQL變得很好玩又很傷腦
+
+---
+
+### INNER JOIN
+
+把令一張表根據條件，加進來
+```
+SELECT ... FROM <table_A>
+[WHERE <condition>]
+INNER JOIN <table>
+ON <condition>
+```
+
+NOTE: 這個範例可以讓查詢的結果，是兩個表根據條件合成的結果，因為是查詢，所以它只是顯示而已，並不是真的讓其中一張表變成你看到的樣子。當然更新之類的其他功能也可以用到INNER JOIN，而除了INNSER JOIN還有其他形式的JOIN。
+
+----
+
+![](https://i.imgur.com/kpmdm8L.png)
+
+----
+
+```
+SELECT customers.Name, orders.Order_No
+FROM customers
+INNER JOIN orders
+ON customers.C_Id=orders.C_Id;
+```
+
+![](https://i.imgur.com/yGSskrL.png)
+
+結論：符合條件的才顯示（O_Id對應不到使用者，所以沒顯示）
+
+---
+
+### LEFT JOIN
+
+```
+SELECT <col1>[, <col2>...]
+FROM <table 1>
+LEFT JOIN <table 2>
+ON <tableX>.<col?>=<tableY>.<col?>;
+```
+
+----
+
+![](https://i.imgur.com/hAD3SGS.png)
+
+----
+
+```
+SELECT customers.Name, orders.Order_No
+FROM customers
+LEFT JOIN orders
+ON customers.C_Id=orders.C_Id;
+```
+
+![](https://i.imgur.com/lQSjtth.png)
+結論：列出所有左表的資料
+（每個符合條件的都會列出一次，右表如果不符合的也列出，但是對應資料會空著）
+
+NOTE: 這邊可以注意到，因為不同表之間的欄位可以能會一樣，像是這個範例裡面，兩張表都有C_Id，所以會加上表的名稱，才有辦法知道你在指定哪一張表的C_Id。
+
+---
+
+### RIGHT JOIN
+
+```
+SELECT col1[, col2]
+FROM <table1>
+RIGHT JOIN <table2>
+ON <tableX>.<col1>=<tableY>.<col2>
+```
+
+
+----
+
+![](https://i.imgur.com/csKoeYq.png)
+
+----
+
+```
+SELECT customers.Name, orders.Order_No
+FROM customers
+RIGHT JOIN orders
+ON customers.C_Id=orders.C_Id;
+```
+
+![](https://i.imgur.com/WYTvWyk.png)
+結論：列出所有右表的資料
+（每一筆都列出，對應不到的左表就空著，基本上和LEFT JOIN的差別只是左右表定義）
+
+NOTE: 可以注意到，範例的語法跟LEFT JOIN是一樣的，兩個差別在於RIGHT JOIN是保留右邊表的所有資料，然後把符合條件的從左放進來，沒有就空著；而LEFT JOIN是保留左邊表的所有資料，然後把符合條件的從右表放進來，沒有就空著
+這邊要能理解，為什麼LEFT JOIN時，明明原本表只有3筆資料，最後顯示確有5筆，但RIGHT JOIN時，數量就跟原本表一樣，但是又說LEFT和RIGHT只是左右表定義相反而已。
+因為LEFT的條件有多個符合，所以分別列出多個，但是RIGHT都是只有一個或是沒有符合，所以有剛好一樣
+
+---
+
+### try try
+
+> 建立剛剛範例的表格，並且試試上面的各種JOIN方式
+
+---
+
+### UNION
+~~一個我根本沒有用過得功能 不對等等這好像是我注入時候有用過~~
+擷取表之間，列出指定欄位，不重複的值
+```
+SELECT <col> FROM <table>
+UNION
+SELECT <col> FROM <table>;
+```
+
+----
+
+### 概念上
+
+![](https://i.imgur.com/tfylXPA.png)
+
+
+
+NOTE: UNION 指令的目的是將兩個 SQL 語句的結果合併起來。從這個角度來看， UNION 跟 JOIN 有些許類似，因為這兩個指令都可以由多個表格中擷取資料。 UNION 的一個限制是兩個 SQL 語句所產生的欄位需要是同樣的資料種類。另外，當我們用 UNION 這個指令時，我們只會看到不同的資料值 (類似 SELECT DISTINCT)。 講到這裡，你們可能覺得台上那個在公鯊ㄒ...
+
+----
+
+#### 公鯊ㄒ...
+
+![](https://i.imgur.com/ssNiZDk.png)
+
+
+我們來看看範例
+
+
+----
+
+table:
+![](https://i.imgur.com/0jPz2nl.png)
+
+Query:
+```
+SELECT Txn_Date FROM Store_Information
+UNION
+SELECT Txn_Date FROM Internet_Sales;
+```
+
+NOTE:可以先想想看結果。
+
+----
+
+result:
+![](https://i.imgur.com/qgIP9HL.png)
+結果：從兩張表，列出不重複的Date
+(皆為同類型資料)
+
+---
+
+### 更多condition
+
+----
+
+### LIKE %
+
+```
+1. WHERE `username` LIKE "Japari"
+=>"Japari"
+2. WHERE `username` LIKE "Ja%"
+=>"Japari", "JapariPark", "Japan", "JaKaMi"
+```
+
+NOTE: SQL除了基本的= > < !=，在字串的比對上還多了很多特別的用法，而這些特別的用法通常都是用LIKE
+
+---
+
+### 大挑戰時間！:D
+
+
+https://www.hackerrank.com/domains/sql?filters%5B.%28%29%5D%5B%5D=select&filters%5Bsubdomains%5D%5B%5D=join
+
+<!--
+
+https://www.hackerrank.com/challenges/african-cities/problem
+
+SELECT `CITY`.`name` FROM `CITY`
+INNER JOIN `COUNTRY` 
+ON `CITY`.`CountryCode`=`COUNTRY`.`Code` AND `COUNTRY`.`CONTINENT` LIKE 'Africa'
+
+-->
+
+

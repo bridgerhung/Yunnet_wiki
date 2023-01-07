@@ -1,0 +1,281 @@
+---
+title: git
+sidebar_position: 2
+description: 版本控制與多人協作 Git
+---
+
+:::info
+[原始 MD by 綱庭](https://hackmd.io/@fan9704/HJOT8yHQK#/)
+:::
+
+---
+
+## tags: YunNET
+
+# 版本控制與多人協作 Git
+
+[延伸閱讀 1](https://hackmd.io/@sysprog/gnu-linux-dev/https%3A%2F%2Fhackmd.io%2F%40sysprog%2Fgit-with-github)
+[延伸閱讀 2](https://blog.techbridge.cc/2018/01/17/learning-programming-and-coding-with-python-git-and-github-tutorial/)
+
+---
+
+### Git 是啥 能吃嗎?
+
+> 嘿 當然不行
+
+---
+
+# 介紹 Git
+
+Git is Version Control System(VCS)，it is use to manage program and code and it can protect all of the program file modify record and history version
+
+---
+
+### Git 延伸閱讀本人製作
+
+[完整版本](https://hackmd.io/@fan9704/B1zWxB_nu)
+
+---
+
+不覺得這很像追趕報告的你嗎
+![](https://i.imgur.com/e62oj6j.png)
+是不是覺得有點母湯
+
+---
+
+Git 創始人 Linus Torvald
+最初目的是為更好地管理 Linux 核心開發而設計
+![](https://i.imgur.com/fJDDfwB.png)
+
+---
+
+起因是 Linux 的 Kernel VCS 公司突然要求付費，
+然後 Linus 花十天寫了一個新的 VCS(git)。
+
+---
+
+> 10 天ㄟ你跟我開玩笑嗎...
+
+---
+
+### 安裝 git
+
+[Git Website Click me](http://git-scm.com/)
+Git has GUI , but i don,t recommend you to use that
+Let,s try to use Git bash
+
+---
+
+### 基本觀念
+
+![](https://i.imgur.com/rZ5JM6L.png)
+
+---
+
+#### 多人協作示意圖
+
+![](https://i.imgur.com/tzSArAk.png)
+
+---
+
+### 基本操作
+
+---
+
+### 抓專案(專門拿來抓別人已發布的 git 專案)
+
+> 有了他就能看到別人~~嘿嘿有趣~~的作品了
+
+```git
+git clone <url>
+```
+
+GitHub BitBucket GitLab 只要是 public 的或你擁有權限的都可以作使用喔
+[試試看抓這個專案](https://github.com/axios/axios)
+
+---
+
+### 初始化
+
+宣告該專案資料夾為 需要使用 Git 功能的專案
+
+```git
+git init
+```
+
+簡而言之就是 git 的初始化 所有 git 功能皆須作用在經初始化的 folder 裡
+
+---
+
+### 查看目前狀態
+
+> 通常拿來看 自己操作到哪裡了
+
+```git
+git status
+```
+
+---
+
+#### 查看整個 folder 的紀錄
+
+看起來很長 不過我更喜歡下面這個(簡短又方便)
+
+```git
+git log --oneline --graph --decorate --all
+gitk
+```
+
+---
+
+### 基本指令就到這邊為止
+
+那這些會陪伴你一輩子 好好記得吧
+他只是看起來有點複雜而已
+實際 多打就會記得
+
+---
+
+### repository 操作
+
+---
+
+### 將檔案紀錄到 staging area(index)
+
+```git
+git add <file_name>
+```
+
+### 對不起我後悔了 將已經記錄到 index 的資料刪除
+
+```git
+git rm --cached <file>
+```
+
+---
+
+### 提交至 local repository
+
+```git
+git commit -m "提交訊息"
+```
+
+---
+
+### HEAD 頭?
+
+[延伸教材](https://backlog.com/git-tutorial/tw/stepup/stepup1_3.html)
+在 Git，HEAD 代表當前分支的最新提交名稱。在建立新的數據庫時，Git 會預設 HEAD 指向 master 分支。您可以藉著移動 HEAD 的指向，更新正在使用的分支。
+
+這個東西當你有在多人開發就會很重要了
+
+---
+
+### 顯示修改 對比前後修改
+
+```git
+git diff
+```
+
+[用法有很多 可以參考這裡](https://www.tpisoftware.com/tpu/articleDetails/1450)
+不過 我還是比就喜歡 gitk
+
+---
+
+### 樹不只會直直往上長
+
+##### 還有分支
+
+---
+
+### 建立分支
+
+```git
+git branch //顯示本repository有哪些branch
+git branch 分支名稱
+```
+
+### 剪掉樹枝 去除分支
+
+```git
+git branch -d 分支名稱
+```
+
+---
+
+### 從這根樹枝跳到另一根
+
+```git
+git checkout 'branch_name'
+```
+
+---
+
+### 當你覺得這分支該回到主幹時
+
+```git
+git merge 目標branch//合併目標branch跟本branch
+```
+
+---
+
+### 換人當主幹
+
+[rebase 的用法](https://blog.yorkxin.org/posts/git-rebase.html)
+
+```git
+git rebase
+```
+
+---
+
+<!--
+### 實作環節
+建立一個專案 並且使用git
+建立一個文字檔 內容是一首唐詩(春曉)
+
+結果 在master分支 出現(春曉)
+    在 develop分支 出現(江雪)
+-->
+
+### 額外補充
+
+當然 git 可以提交至 github bitbucket gitlab
+github bitbucket gitlab 都是可以存放 Git remote repository 的地方
+那本次範例以 GitHub 來做
+
+---
+
+### 申請 Github
+
+[GitHub](https://github.com/)
+![](https://i.imgur.com/Z5PHK7j.png)
+
+---
+
+### 建立你的第一個 repository
+
+![](https://i.imgur.com/B4yNMuk.png)
+
+---
+
+### 該填的寫一寫
+
+![](https://i.imgur.com/Y8awy7M.png)
+
+---
+
+### 你會獲得
+
+他告訴你說 我們可以透過 HTTPS 跟 SSH 來 push 我們的專案
+![](https://i.imgur.com/XwgZz5h.png)
+
+---
+
+### 用 SSH 來 Upload
+
+[參考文章](https://hackmd.io/@sysprog/gnu-linux-dev/https%3A%2F%2Fhackmd.io%2F%40sysprog%2Fgit-with-github)
+
+---
+
+### 掰掰 快去吃宵夜吧

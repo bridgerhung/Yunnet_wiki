@@ -3,7 +3,6 @@
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-
 /** @type {import('@docusaurus/types').Config} */
 
 const config = {
@@ -72,6 +71,12 @@ const config = {
             docId: '/category/宿舍網路',
             position: 'left',
             label: '宿舍網路',
+          },
+          {
+            type: 'doc',
+            docId: '/category/過去學年度封存',
+            position: 'left',
+            label: '以前的社課資料',
           },
         ],
       },
