@@ -1,0 +1,418 @@
+---
+title:  第八次社課
+sidebar_position: 8
+description: Vue Introduction
+---
+
+:::info
+[原始 MD by 炳章](https://hackmd.io/@happy123/vue_basic#/)
+:::
+
+basic introduction of
+![](https://i.imgur.com/Kb0BiEs.png)
+*Benson*
+
+---
+
+### What is Vue.js?
+NOTE:是一個用於建立使用者介面的開源JavaScript框架，也是一個建立單頁應用的Web應用框架。 2016年一項針對JavaScript的調查表明，Vue有著89%的開發者滿意度。在GitHub上，該專案平均每天能收穫95顆星，為Github有史以來星標數第3多的專案。
+
+----
+
+### What is framework?
+NOTE:把 Framework 比喻成樂高積木，他已經建構了大多數你會使用到的元件，甚至已經有良好的骨架，你只需要在它上頭建築你所需要的 Application(應用) ，Framework 幫你定義好大部分的結構，剩下的細節該如何客製化，該怎麼做動只需要依照你的需求去做修改與實現即可。
+
+----
+
+### Types of Frameworks
+* Web Application Frameworks
+
+* DataScience Frameworks
+* Mobile Development Frameworks
+
+----
+
+#### Common web Application Frameworks
+* Angular
+
+* React
+* Vue
+
+----
+
+### Why Vue.js?
+* The small size of the application.
+
+* Higher performance.
+* Learning Ease.
+* Improved Documentation.
+* Progressive.
+* ...etc
+
+NOTE:it still have a lot of advantage.
+* Very flexible.
+
+----
+
+### Progressive?
+NOTE:
+![](https://i.imgur.com/eg6HLxC.png)
+
+
+---
+
+### Let's get starteDdddd!
+
+----
+
+under your home directory
+```
+mkdir vue-session
+
+cd vue-session
+
+touch myFirstVue.html
+
+code .
+```
+
+----
+
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">{{ message }}</div>
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data: {
+          message: "Hello Vue!",
+        },
+      });
+    </script>
+  </body>
+</html>
+
+```
+NOTE:describe the code
+
+----
+
+The data and the DOM are now linked, and everything is now **reactive**.
+
+----
+
+U can simply change the value by enter
+```
+app.message = "?"
+```
+in the browser’s JavaScript console & c what's the difference.
+
+---
+
+Directives are prefixed with v- to indicate that they are special attributes provided by Vue.
+
+---
+
+### v-bind
+keep this element’s attribute up-to-date with the property on the Vue instance.
+NOTE:bind the directive with the value
+
+----
+
+```
+<div id="app-2">
+  <span v-bind:title="message">
+    Hover your mouse over me for a few seconds
+    to see my dynamically bound title!
+  </span>
+</div>
+```
+```
+var app2 = new Vue({
+  el: '#app-2',
+  data: {
+    message: 'You loaded this page on ' + new Date().toLocaleString()
+  }
+})
+```
+
+----
+
+```
+app2.message = 'some new message'
+```
+NOTE:what's the different between up 2.
+
+---
+
+### v-if
+
+----
+
+```
+<div id="app-3">
+  <span v-if="seen">Now you see me</span>
+</div>
+```
+```
+var app3 = new Vue({
+  el: '#app-3',
+  data: {
+    seen: true
+  }
+})
+```
+
+----
+
+```
+app3.seen = false
+```
+
+---
+
+### v-for
+
+----
+
+```
+<div id="app-4">
+  <ol>
+    <li v-for="todo in todos">
+      {{ todo.text }}
+    </li>
+  </ol>
+</div>
+```
+```
+var app4 = new Vue({
+  el: '#app-4',
+  data: {
+    todos: [
+      { text: 'Learn JavaScript' },
+      { text: 'Learn Vue' },
+      { text: 'Build something awesome' }
+    ]
+  }
+})
+```
+
+----
+
+```
+app4.todos.push({ text: 'New item' })
+```
+
+---
+
+### Handling User Input
+
+----
+
+### v-on
+NOTE:To let users interact with your app, we can use the v-on directive to attach event listeners that invoke methods on our Vue instances:
+
+----
+
+```
+<div id="app-5">
+  <p>{{ message }}</p>
+  <button v-on:click="reverseMessage">Reverse Message</button>
+</div>
+```
+```
+var app5 = new Vue({
+  el: '#app-5',
+  data: {
+    message: 'Hello Vue.js!'
+  },
+  methods: {
+    reverseMessage: function () {
+      this.message = this.message.split('').reverse().join('')
+    }
+  }
+})
+```
+
+---
+
+### v-model
+
+----
+
+```
+<div id="app-6">
+  <p>{{ message }}</p>
+  <input v-model="message">
+</div>
+```
+```
+var app6 = new Vue({
+  el: '#app-6',
+  data: {
+    message: 'Hello Vue!'
+  }
+})
+```
+
+----
+
+### Try to type something in.
+
+---
+
+### project time
+
+----
+
+![](https://i.imgur.com/A1UPWQ8.png)
+
+----
+
+### STEP 1
+use v-model to insert the memo
+![](https://i.imgur.com/oViQG8w.png)
+
+----
+
+### STEP 2
+use v-for to do the list
+![](https://i.imgur.com/n2EJxo4.png)
+
+----
+
+### STEP 3
+use html button to add memo into list
+
+----
+
+### STEP 4
+use v-bind to bind the memo with color
+NOTE:'color:red' \`{}\`
+
+----
+
+### STEP 5
+use v-model to insert the color
+
+----
+
+### STEP 6
+use html button to set the color and change the color
+
+----
+
+### STEP 7
+use v-if to show the list or hide the list
+
+----
+
+### STEP 8
+use the pop method to pop the memo u may misinsert
+
+----
+
+### DONE
+![](https://i.imgur.com/A1UPWQ8.png)
+
+---
+
+### Composing with Components
+
+----
+
+![](https://i.imgur.com/2Xr571L.png)
+NOTE:講解組件化可以不用讓東西一直重複使用等等，維護性高，一個壞就只會壞一個
+
+----
+
+```
+// Define a new component called todo-item
+Vue.component('todo-item', {
+  template: '<li>This is a todo</li>'
+})
+
+var app = new Vue(...)
+```
+in template:
+```
+<ol>
+  <!-- Create an instance of the todo-item component -->
+  <todo-item></todo-item>
+</ol>
+```
+
+----
+
+use "prop" to pass data from parent scope into child components
+
+----
+
+in js:
+```
+Vue.component('todo-item', {
+  props: ['todo'],
+  template: '<li>{{ todo.text }}</li>'
+})
+
+var app7 = new Vue({
+  el: '#app-7',
+  data: {
+    groceryList: [
+      { id: 0, text: 'Vegetables' },
+      { id: 1, text: 'Cheese' },
+      { id: 2, text: 'Whatever else humans are supposed to eat' }
+    ]
+  }
+})
+```
+
+----
+
+in html:
+```
+<div id="app-7">
+  <ol>
+    <!--
+      Now we provide each todo-item with the todo object
+      it's representing, so that its content can be dynamic.
+      We also need to provide each component with a "key",
+      which will be explained later.
+    -->
+    <todo-item
+      v-for="item in groceryList"
+      v-bind:todo="item"
+      v-bind:key="item.id"
+    ></todo-item>
+  </ol>
+</div>
+```
+
+----
+
+In most of the Vue.js project:
+```
+<div id="app">
+  <app-nav></app-nav>
+  <app-view>
+    <app-sidebar></app-sidebar>
+    <app-content></app-content>
+  </app-view>
+</div>
+```
+
+---
+
+now , try to use component to rebuild the list :d
+
+---
+
+WTF.js
+https://ithelp.ithome.com.tw/articles/10190873
