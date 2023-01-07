@@ -1,5 +1,5 @@
 ---
-title:  幹訓1
+title: 幹訓1
 sidebar_position: 2
 description: First Vuetify Introduction
 ---
@@ -9,176 +9,195 @@ description: First Vuetify Introduction
 :::
 
 # 你想嘗鮮嗎? 切到不想切的網頁
+
 ![](https://i.imgur.com/YGBCgso.jpg)
 by Kai-Hong Chen
 
+---
+
+## 先 clone 下來以下專案
+
+```bash=
+$ cd ~
+$ git clone https://github.com/leave3310/pokemaster.git
+```
 
 ---
 
-## 先clone下來以下專案
-```bash=
-$ cd ~
-$ git clone https://github.com/leave3310/pokemaster.git 
-```
+### install 一下 nodejs 跟 yarn
 
-----
+僅限 Ubuntu 使用，週三有來社課的就不用了
 
-### install一下nodejs跟yarn
-僅限Ubuntu使用，週三有來社課的就不用了
 ```bash=
-$ curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash - 
+$ curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 $ sudo apt-get install -y nodejs
 $ curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 $ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 $ sudo apt-get install yarn
 ```
 
-----
+---
 
 ### 都弄完之後確認一下有沒有裝好
+
 ![](https://i.imgur.com/lZpViG8.png)
 
 ---
 
-### 我們先講解一下nodejs跟yarn是在幹嘛的
-
-----
-
-### nodejs就是在非瀏覽器的地方執行javascript
-
-----
-
-### yarn則是nodejs的套件管理器，就像python跟pip的關係
+### 我們先講解一下 nodejs 跟 yarn 是在幹嘛的
 
 ---
 
-### clone完專案之後cd進去剛剛clone的資料夾並且下以下指令
+### nodejs 就是在非瀏覽器的地方執行 javascript
+
+---
+
+### yarn 則是 nodejs 的套件管理器，就像 python 跟 pip 的關係
+
+---
+
+### clone 完專案之後 cd 進去剛剛 clone 的資料夾並且下以下指令
+
 ![](https://i.imgur.com/5zIXUMy.png)
+
 ```bash=
-$ cd pokemaster 
+$ cd pokemaster
 $ yarn install
-$ code .  
+$ code .
 ```
 
-----
+---
 
 ![](https://i.imgur.com/wEc9g6R.png)
 
-----
+---
 
 ![](https://i.imgur.com/lNNMmwB.png)
 
-----
+---
 
 [點我一下](https://marketplace.visualstudio.com/items?itemName=octref.vetur)
 要安裝這個喔~如果沒裝的話程式碼的顏色都會一樣，會造成閱讀障礙喔
 
-----
+---
 
-### 一切都準備就緒了，就前往你的VScode摟~
-
+### 一切都準備就緒了，就前往你的 VScode 摟~
 
 ---
 
 ## 先來講講基本的東西
 
-----
+---
 
 ### 資料夾的部分
+
 目前我們這次只會講到目前用到的部分，之後社課還會再講得更詳細一些
 
-----
+---
 
 這是我們的頁面結構的樣子
 ![](https://i.imgur.com/0SXm5Nu.png)
 
-----
+---
 
 ### pages
-就是拿來放你寫的網頁，一開始取名為index就會在連過去時直接用他
+
+就是拿來放你寫的網頁，一開始取名為 index 就會在連過去時直接用他
 index.vue ➡ 127.0.0.1/
 about.vue ➡ 127.0.0.1/about
 
-----
+---
 
 ### layouts
+
 放置像是頁首跟頁尾這種固定的東西，這樣我就不用在每個頁面上寫上重複的東西，造成程式碼複雜
 
 ---
 
-## 再來說說nuxt裡面的部份ㄅ~
+## 再來說說 nuxt 裡面的部份ㄅ~
 
-----
+---
 
 ### data
-就是一般程式裡面的變數，他是來跟其他屬性作連結用的，像是v-model、v-bind等等
 
-----
+就是一般程式裡面的變數，他是來跟其他屬性作連結用的，像是 v-model、v-bind 等等
+
+---
 
 ### v-model
-負責雙向綁定用，使用者輸入的同時也會讓data改變
 
-----
+負責雙向綁定用，使用者輸入的同時也會讓 data 改變
+
+---
 
 ### v-bind
-單向綁定，跟data綁定的話就是只能看data是什麼就甚麼，沒辦法隨使用者輸入來做變動
 
-----
+單向綁定，跟 data 綁定的話就是只能看 data 是什麼就甚麼，沒辦法隨使用者輸入來做變動
 
-### Mustache 標籤 
-它裡面可以放data、也可以放function，但是不能放表達式，像是var a = 0這種東西
+---
 
-----
+### Mustache 標籤
 
-### methods跟computed
-最主要的差別是在假如在data更新時computed才會一起更新，但methods不管有沒有data的綁定都會更新
+它裡面可以放 data、也可以放 function，但是不能放表達式，像是 var a = 0 這種東西
 
+---
+
+### methods 跟 computed
+
+最主要的差別是在假如在 data 更新時 computed 才會一起更新，但 methods 不管有沒有 data 的綁定都會更新
 
 ---
 
 ## 接下來講一點刻板的東東
+
 這個是[文檔](https://v2.vuetifyjs.com/zh-Hans/getting-started/quick-start/)
 
-----
+---
 
 ### [v-row、v-col](https://v2.vuetifyjs.com/zh-Hans/components/grids/)
-他會幫我們把整個顯示器切成12等分
 
-----
+他會幫我們把整個顯示器切成 12 等分
+
+---
 
 ### [v-select](https://v2.vuetifyjs.com/zh-Hans/components/selects/)
+
 就是下拉選單，不用懷疑
 
-----
+---
 
 ### [v-sheet](https://v2.vuetifyjs.com/zh-Hans/components/sheets/)
+
 背景啦，而且可以適度的調整大小
 
-----
+---
 
 ### [v-group](https://v2.vuetifyjs.com/zh-Hans/components/chip-groups/)
+
 一個群組，可以放很多東東，而且看個人要怎麼調整，可以多選也可以單選
 
-----
+---
 
 ### [v-card](https://v2.vuetifyjs.com/zh-Hans/components/cards/)
+
 文具行的卡片那種感覺，可以放些重要的東西在上面，像是訊息
 
-----
+---
 
 ### [開關燈的方式](https://v2.vuetifyjs.com/zh-Hans/customization/theme/#%E7%94%A8%E4%BE%8B)
-用v-model的方式去抓現在到底要暗色還是亮色模式
+
+用 v-model 的方式去抓現在到底要暗色還是亮色模式
 
 ---
 
 ## 來做一個東西吧~
 
-----
+---
 
 ### [輸入框](https://v2.vuetifyjs.com/zh-Hans/components/text-fields/)
 
 ---
 
 # finish~
-![](https://i.imgur.com/ZFBuHnj.gif)
 
+![](https://i.imgur.com/ZFBuHnj.gif)
