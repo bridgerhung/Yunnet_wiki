@@ -1,4 +1,5 @@
 ---
+displayed_sidebar: older
 title: typescript
 sidebar_position: 3
 description: typescript

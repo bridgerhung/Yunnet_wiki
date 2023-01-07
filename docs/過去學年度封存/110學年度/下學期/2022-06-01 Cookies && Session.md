@@ -1,4 +1,5 @@
 ---
+displayed_sidebar: older
 title: Cookies/Session
 sidebar_position: 11
 description: Cookies/Session

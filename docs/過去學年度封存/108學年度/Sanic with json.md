@@ -1,4 +1,5 @@
 ---
+displayed_sidebar: older
 title:  Sanic with json
 sidebar_position: 4
 description: Sanic with json

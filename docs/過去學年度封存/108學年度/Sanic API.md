@@ -1,4 +1,5 @@
 ---
+displayed_sidebar: older
 title:  Sanic API
 sidebar_position: 2
 description: Sanic API

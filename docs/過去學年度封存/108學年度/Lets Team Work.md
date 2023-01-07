@@ -1,4 +1,5 @@
 ---
+displayed_sidebar: older
 title:  Let's Team Work
 sidebar_position: 5
 description: Let's Team Work

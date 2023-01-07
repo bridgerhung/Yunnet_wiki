@@ -1,4 +1,5 @@
 ---
+displayed_sidebar: older
 title: Vuetify II
 sidebar_position: 5
 description: Vuetify II
