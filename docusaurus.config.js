@@ -35,7 +35,7 @@ const config = {
       ({
         docs: {
           routeBasePath: '/',
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: require.resolve('./sidebars.js'),},
         older: {
           routeBasePath: '/category/過去學年度封存',
           sidebarPath: require.resolve('./sidebars.js'),
