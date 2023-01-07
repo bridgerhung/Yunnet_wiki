@@ -3,6 +3,7 @@
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const versions = require('./versions.json');
 
 /** @type {import('@docusaurus/types').Config} */
 
@@ -14,6 +15,7 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/Yunnet_icon.svg',
+  
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -37,6 +39,13 @@ const config = {
         docs: {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
+          lastVersion: 'current',
+            versions: {
+              current: {
+                label: '111上學期',
+                path: '111.1',
+              },
+            },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
         },
@@ -72,6 +81,12 @@ const config = {
             docId: '/category/宿舍網路',
             position: 'left',
             label: '宿舍網路',
+          },
+          {
+            type: 'docsVersionDropdown',
+            position: 'right',
+            dropdownItemsAfter: [{to: '/versions', label: '所有版本'}],
+            dropdownActiveClassDisabled: true,
           },
         ],
       },
