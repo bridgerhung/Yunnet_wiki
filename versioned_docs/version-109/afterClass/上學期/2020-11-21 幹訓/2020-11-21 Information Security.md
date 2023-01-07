@@ -365,9 +365,7 @@ NOTE:
 
 ### 分組名單
 
-> <font style="font-size:28px">第一組: 張珉萁、何育玟、蔡承佑、周永陞</font>
-> <font style="font-size:28px">第二組: 謝孟憲、張慈玲、范綱庭、陳珮玲</font>
-> <font style="font-size:28px">第三組: 伍俊義、高仲寧、林家明</font>
+> <font style="font-size:28px">第一組: 張珉萁、何育玟、蔡承佑、周永陞</font> > <font style="font-size:28px">第二組: 謝孟憲、張慈玲、范綱庭、陳珮玲</font> > <font style="font-size:28px">第三組: 伍俊義、高仲寧、林家明</font>
 
 ---
 
@@ -755,7 +753,3 @@ Base64 主要用途是某些系統中只能使用 ASCII 字符，為了避免某
 #### xzzbmq vlro cxfirob xka jlsb lk
 
 ---
-
-### 最後的最後工商一下
-
-![image alt](https://scontent.ftpe2-2.fna.fbcdn.net/v/t1.0-9/s960x960/123001587_3466151400120297_7809128755161093534_o.jpg?_nc_cat=110&ccb=2&_nc_sid=e3f864&_nc_ohc=3coPsTmssz0AX_VsHc_&_nc_ht=scontent.ftpe2-2.fna&tp=7&oh=eb173e660de83b3d9f7360e9326dcea6&oe=5FDC5B85)
