@@ -41,7 +41,7 @@ const config = {
           versions: {
             current: {
               label: '111上學期',
-              path: '111.1',
+              path: './docs',
             },
           },
           // Please change this to your repo.
