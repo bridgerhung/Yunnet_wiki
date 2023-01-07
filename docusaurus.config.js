@@ -38,12 +38,7 @@ const config = {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
           lastVersion: 'current',
-          versions: {
-            current: {
-              label: '111上學期',
-              path: './docs',
-            },
-          },
+
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
         },
