@@ -4,7 +4,8 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const versions = require('./versions.json');
-
+  
+  
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: '雲科網管wiki',
@@ -86,22 +87,26 @@ const config = {
 
         copyright: `Copyright © ${new Date().getFullYear()} 雲科網管`,
       },
+      
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
-      algolia: {
-        appId: 'netlify_26432c7f-f0e5-4e0e-b032-cca808867a70_main_all',
-        apiKey: 'bf92cdb5b1850bb199db2a2d95e51d9e',
-        indexName: 'CQDWJ03MCR',
-        replaceSearchResultPathname: {
-          from: '/docs/', // or as RegExp: /\/docs\//
-          to: '/',
-          searchParameters: {},
-          searchPagePath: 'search',
-        },
-      },
+      
+      
     }),
+    themes: [
+      [
+        "@easyops-cn/docusaurus-search-local",
+        /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
+        ({
+          hashed: true,
+          language: ["en", "zh"],
+          highlightSearchTermsOnTargetPage: true,
+          explicitSearchResultPath: true,
+        }),
+      ],
+    ],
 };
 
 module.exports = config;
