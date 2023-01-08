@@ -3,8 +3,8 @@
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-/** @type {import('@docusaurus/types').Config} */
 
+/** @type {import('@docusaurus/types').Config} */
 const config = {
   title: '雲科網管wiki',
   tagline: '這裡專放一些網管的相關資訊',
@@ -35,9 +35,6 @@ const config = {
       ({
         docs: {
           routeBasePath: '/',
-          sidebarPath: require.resolve('./sidebars.js'),},
-        older: {
-          routeBasePath: '/category/過去學年度封存',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -71,15 +68,9 @@ const config = {
           },
           {
             type: 'doc',
-            docId: '/category/宿舍網路',
+            docId: '/category/網管幹訓',
             position: 'left',
             label: '宿舍網路',
-          },
-          {
-            type: 'doc',
-            docId: '/category/過去學年度封存',
-            position: 'left',
-            label: '以前的社課資料',
           },
         ],
       },
