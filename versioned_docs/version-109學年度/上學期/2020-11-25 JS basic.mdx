@@ -1,0 +1,589 @@
+---
+title:  第六次社課
+sidebar_position: 6
+description: JS Basic
+---
+
+:::info
+[原始 MD by 炳章](https://hackmd.io/@happy123/BensonJSBasic)
+:::
+
+---
+tags: yunnet course
+title: JavaScript
+slideOptions:
+  theme: solarized
+  transition: 'slide'
+---
+
+### JavaScript for beginner
+![](https://i.imgur.com/jJ7P6MY.png)
+*Benson*
+
+---
+
+### a lot of meme like this
+![](https://i.imgur.com/Gn3QFxh.png)
+
+----
+
+## why?
+
+----
+
+### Thanks for JS - meme
+![](https://i.imgur.com/wlSkBUJ.png)
+
+----
+
+but today, we'll start from the very basic JS syntax
+so don't worry about it :DD.
+
+---
+
+#### the most IMPORTANT skill 
+#### u need to before learning anything in JS
+
+----
+
+## console.log
+
+----
+
+![](https://i.imgur.com/b1l6C6C.png)
+
+
+---
+
+### Declaring JavaScript Variables
+
+----
+
+* var
+
+* let
+* const
+NOTE:before 2015 only var, but global will cause some problem,after 2015, "const,let" born! "let" limited in scope, "var" in global
+
+----
+
+### JS identifiers (names) rules
+
+----
+
+#### must begin with:
+* A letter (A-Z or a-z)
+
+* A dollar sign ($)
+* Or an underscore (_)
+
+---
+
+### JS Operators
+
+----
+
+### JS Arithmetic Operators
+
+![](https://i.imgur.com/mChXF0G.png)
+
+----
+
+### JS Comparison Operators
+
+![](https://i.imgur.com/gx06IEH.png)
+
+
+NOTE: Emphasize "===","?"
+
+----
+
+### === vs ==
+![](https://i.imgur.com/TQaPzOf.png)
+NOTE:equal value equal type
+
+----
+
+### ternary operator
+syntax:
+```
+condition ? exprIfTrue : exprIfFalse
+```
+example:
+```
+var age = 26;
+
+var beverage = (age >= 21) ? "Beer" : "Juice";
+
+console.log(beverage); // "Beer"
+```
+
+---
+
+### JS data type
+
+----
+
+### JS Types are Dynamic
+```
+var x;           
+// Now x is undefined
+
+x = 5;           
+// Now x is a Number
+
+x = "John";      
+// Now x is a String
+```
+
+----
+
+### common type
+* Strings
+
+* Numbers
+* Booleans
+* Arrays
+* Objects
+
+----
+
+### specific type
+* Undefined
+
+* Null
+NOTE:In JavaScript null is "nothing"
+You can consider it a bug in JavaScript that typeof null is an object. It should be null.
+
+----
+
+
+### The typeof Operator
+```
+typeof "John"              
+// Returns "string"
+
+typeof 3.14                
+// Returns "number"
+
+typeof true                
+// Returns "boolean"
+
+typeof false               
+// Returns "boolean"
+
+typeof x                   
+// Returns "undefined" (if x has no value)
+```
+
+----
+
+#### Difference Between Undefined and Null
+```
+typeof undefined           // undefined
+
+typeof null                // object
+
+null === undefined         // false
+
+null == undefined          // true
+```
+
+---
+
+### JS for Loops
+
+----
+
+### syntax:
+```
+var i;
+
+for (i = 0; i < 5; i++) {
+
+  console.log(i);
+  
+}
+```
+### function expressions:
+```
+const square = function(number) { return number * number }
+```
+
+----
+
+😱😨😰
+```
+const factorial = function fac(n) { return n < 2 ? 1 : n * fac(n - 1) }
+```
+
+---
+
+### JS if else and else if
+
+----
+
+### syntax
+```
+if (condition1) {
+
+  //  block of code to be executed if condition1 is true
+  
+} else if (condition2) {
+
+  //  block of code to be executed if the condition1 is false and condition2 is true
+  
+} else {
+
+  //  block of code to be executed if the condition1 is false and condition2 is false
+  
+}
+```
+
+---
+
+### JS function
+
+----
+
+### syntax
+```
+function square(number) {
+
+  return number * number;
+  
+}
+```
+
+---
+
+### JS setTimeout()
+
+----
+
+### syntax
+```
+setTimeout(function, milliseconds, param1, param2, ...)
+```
+
+----
+
+#### setTimeout example
+```
+setTimeout(function(){ console.log("2 seconds") }, 2000);
+
+setTimeout(function(){ console.log("4 seconds") }, 4000);
+
+setTimeout(function(){ console.log("6 seconds") }, 6000);
+```
+
+---
+
+## Challenge Time
+
+----
+
+## level 1
+use "for" and "if" statement to print out following result.
+![](https://i.imgur.com/HlhYBhh.png)
+
+----
+
+```
+function abc(){
+
+	for(let i = 1; i <= 10; i++){
+    
+		if(i%2==0){
+        
+			console.log(i+" is even");
+            
+		}else{
+        
+			console.log(i);
+		}
+	}
+}
+
+abc();
+```
+
+----
+
+```
+function abc(){
+
+	for(let i = 1; i <= 10; i++){
+    
+            i%2==0?console.log(i+" is even"):console.log(i);
+            
+	}
+}
+
+abc();
+```
+
+----
+
+## level 2
+use "for" and "setTimeout" statement
+print every 2 second after passing
+==be smart! don't just paste the code 5 times!==
+![](https://i.imgur.com/osJKFBA.png)
+
+----
+
+```
+function abc(){
+
+	for(let i = 2; i <= 10; i+=2){
+    
+		setTimeout(function(){ console.log(i+" seconds") }, i*1000);
+        
+	}
+}
+
+abc();
+```
+
+----
+
+## level 3
+
+![](https://i.imgur.com/wuVyMOY.png)
+
+----
+
+```
+function abc(num){
+
+	if(num == 10){
+    
+		console.log("\nthere's nothing waiting to pass!");
+        
+        console.log("\nEND!");
+        
+        return 0;
+        
+	}
+	console.log("\nwaiting for pass:");
+    
+	for(let i = num+2; i <= 10; i+=2){
+    
+		console.log(i + "second");
+        
+	}
+	console.log("\nNEXT!");
+}
+
+
+for(let i = 2; i <= 10; i+=2){
+
+	setTimeout(function(){console.log("\n=====arriving at "+i+" second=====");abc(i)},i*1000);s
+    
+}
+```
+
+---
+
+### JS Array
+
+----
+
+### Syntax
+```
+var cars = ["Saab", "Volvo", "BMW"];
+```
+
+----
+
+### Popping
+```
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+fruits.pop();
+
+// Removes the last element ("Mango") from fruits
+```
+
+----
+
+### Pushing
+```
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+fruits.push("Kiwi");       
+
+//  Adds a new element ("Kiwi") to fruits
+```
+
+----
+
+### Shifting Elements
+```
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+fruits.shift();
+
+// Removes the first element "Banana" from fruits
+```
+```
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+var x = fruits.shift();
+
+// the value of x is "Banana"
+```
+```
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+fruits.unshift("Lemon");
+
+// Adds a new element "Lemon" to fruits
+```
+
+----
+
+### Deleting Elements
+```
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+delete fruits[0];
+
+// Changes the first element in fruits to undefined
+```
+
+----
+
+### Map
+```
+const array1 = [1, 4, 9, 16];
+
+// pass a function to map
+
+const map1 = array1.map(x => x * 2);
+
+console.log(map1);
+
+// expected output: Array [2, 8, 18, 32]
+```
+
+----
+
+### Slice
+```
+const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+
+console.log(animals.slice(2));
+
+// expected output: Array ["camel", "duck", "elephant"]
+
+console.log(animals.slice(2, 4));
+
+// expected output: Array ["camel", "duck"]
+
+console.log(animals.slice(1, 5));
+
+// expected output: Array ["bison", "camel", "duck", "elephant"]
+```
+
+---
+
+### JS Spread syntax
+
+----
+
+### syntax
+* For function calls:
+```
+myFunction(...iterableObj);
+```
+* For array literals or strings:
+```
+[...iterableObj, '4', 'five', 6];
+```
+* For object literals
+```
+let objClone = { ...obj };
+```
+
+----
+
+### example
+
+----
+
+* Spread in function calls
+```
+function myFunction(x, y, z) { }
+
+let args = [0, 1, 2];
+
+myFunction(...args);
+```
+
+----
+
+* Spread in array literals
+```
+let parts = ['shoulders', 'knees']; 
+
+let lyrics = ['head', ...parts, 'and', 'toes']; 
+
+//  ["head", "shoulders", "knees", "and", "toes"]
+```
+
+----
+
+* Spread in object literals
+```
+let obj1 = { foo: 'bar', x: 42 };
+
+let obj2 = { foo: 'baz', y: 13 };
+
+let clonedObj = { ...obj1 };
+// Object { foo: "bar", x: 42 }
+
+let mergedObj = { ...obj1, ...obj2 };
+// Object { foo: "baz", x: 42, y: 13 }
+```
+
+---
+
+### Challenge Time
+
+----
+
+#### try to use previous Array methods &
+#### following array
+```
+var fruits = ['apple', 'banana', 'orange', 'pear', 'guava'];
+```
+### to console like this.
+![](https://i.imgur.com/CyFSAsO.png)
+
+----
+
+```
+var fruits = ['apple', 'banana', 'orange', 'pear', 'guava'];
+console.log(...fruits);
+fruits.pop();
+console.log(...fruits);
+fruits.push('watermelon');
+console.log(...fruits);
+fruits.push(fruits.shift());
+console.log(...fruits);
+console.log(fruits.shift());
+console.log(fruits.pop());
+fruits.unshift('pineapple');
+console.log(...fruits);
+fruits = fruits.map(x=>x+'s');
+console.log(...fruits);
+fruits.unshift(fruits.pop());
+console.log(...fruits);
+console.log(fruits.slice(1,3));
+```
+
+---
+
+END

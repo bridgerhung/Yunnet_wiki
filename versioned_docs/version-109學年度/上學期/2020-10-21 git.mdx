@@ -1,0 +1,294 @@
+---
+title:  第三次社課
+sidebar_position: 3
+description: git
+---
+
+:::info
+[原始 MD by 祐民](https://hackmd.io/@ji03mmy18/rJgsbe3vv?type=slide#/)
+:::
+
+
+# 三人行，必有我師焉
+
+*Clooooode*
+*YoMin Su*
+
+---
+
+## 想像一下
+
+----
+
+![](https://i.imgur.com/miU4mPp.png =800x)
+這是你的專案，超多程式碼。
+
+----
+
+![](https://i.imgur.com/8u9pj6f.png =800x)
+裏面有一堆檔案，不是很亂，  
+但是開發階段，你很熟悉。
+
+----
+
+![](https://image.freepik.com/free-vector/man-in-business-suit-trying-to-stop-time_3446-255.jpg =400x)
+經過了一段時間的努（轟）力（炸），  
+終於該死的程式可以釋出了。
+
+----
+
+![](https://image.freepik.com/free-icon/completed-tasks_318-81409.jpg =200x)
+你的程式交出去之後，老師覺得不錯，OK。
+
+----
+
+![](https://image.flaticon.com/icons/svg/882/882998.svg =200x)
+又過了一段時間，你差不多把這些程式碼都從腦袋裡丟掉了...
+
+----
+
+![](https://image.freepik.com/free-vector/thinking-beard-hipster-businessman-with-question-mark_47649-176.jpg =400x)
+老師把你找來，跟你說：
+
+----
+
+![](https://image.freepik.com/free-vector/vector-of-speech-bubbles-collection_53876-36701.jpg =400x)
+「可以多加個功能嗎？」
+
+---
+
+「Fuck......」
+
+----
+
+![](https://image.flaticon.com/icons/png/512/1537/1537337.png =400x)
+程式碼早就被你從腦子裡丟掉了，  
+為了不要把東西改壞然後爆炸，你只好..
+
+----
+
+![](https://i.imgur.com/8UpUSGX.png =800x)
+把原本好的程式碼，複製貼上然後標註version1
+然後從version2開始寫下去。
+
+----
+
+![](https://image.flaticon.com/icons/svg/776/776863.svg =400x)
+這樣子往復幾次之後...
+
+----
+
+![](https://i.imgur.com/n04TI41.png)
+你的資料夾應該會變成這樣..  
+
+----
+
+![](https://image.flaticon.com/icons/svg/1485/1485085.svg =400x)
+然後每次東西改壞要復原的時候，  
+就會很想拿槍斃了自己。  
+
+----
+
+![](https://image.flaticon.com/icons/svg/1138/1138151.svg =400x)
+如果老師叫你恢複成某次的變動，  
+你會接著想拿槍斃了老師。
+
+----
+
+爪對會...（台）
+
+---
+
+### So what is git?
+
+----
+
+![](https://cdn.arstechnica.net/wp-content/uploads/2012/06/torvaldsnvidia-640x424.jpg)  
+恩對，他的作者也是Linus。  
+THE。大神。
+
+----
+
+起因是Linux的Kernel版本控制軟體公司，  
+因為一些原因停止了無償使用的授權，
+然後大神爸爸花十天寫了一個替代的軟體。
+
+----
+
+度，就是git...
+
+----
+
+![](https://image.flaticon.com/icons/svg/511/511153.svg =50x)
+![](https://image.flaticon.com/icons/svg/511/511153.svg =50x)
+![](https://image.flaticon.com/icons/svg/511/511153.svg =50x)
+
+---
+
+### Type
+
+----
+
+#### Local
+![](https://denny.one/git-slide/img/18333fig0101-tn.png =400x)
+
+----
+
+#### Central
+![](https://denny.one/git-slide/img/18333fig0102-tn.png =400x)
+
+----
+
+#### Distributed
+![](https://denny.one/git-slide/img/18333fig0103-tn.png =400x)
+
+---
+
+## 指令，我要進來囉
+
+----
+
+### Git 初始化
+###### 從來沒用過....
+```shell=
+git init
+```
+> 總要開始的麻～
+
+----
+
+### 把東西抓下來
+###### 另一個開專案的好朋友
+```shell=
+git clone
+```
+> 這東西不會用，GitHub就不好玩了
+
+----
+
+### 目前狀態
+###### 我是誰,我在哪,這裡是哪裡的最佳指令
+```shell=
+git status
+```
+> 顯示至今為至的操作
+
+----
+
+### 一切的紀錄
+###### 開IDE就會用一次，以免成就感能量不夠
+```shell=
+git log --oneline --graph --decorate --all
+```
+> 成就感爆澎的部份
+
+----
+
+![](https://i.imgur.com/2ubN7wY.png =400x)
+
+----
+
+### 以上指令，將陪伴你一輩子
+
+----
+
+###### 除非你不幹這行（或是回家做粉粿）
+![](https://i.imgur.com/eObDx20.jpg =500x)
+沒錯這是置入
+
+----
+
+### 玩轉Git，種樹累積成就的奇幻旅程
+## 始まるよ❤️
+
+----
+
+### 好，第一棵樹出現了
+##### HEAD是啥
+![](https://i.imgur.com/U9TxCZW.png)
+
+----
+
+### 給加嗎？
+###### 忘記上一次用是什麼時候了
+```shell=
+git add .
+```
+> 你不加，還做啥版控？
+
+----
+
+### 對不起，我錯了
+```shell=
+git rm --cached <file>
+```
+> 清掉你剛剛加進暫存的東西
+
+----
+
+### 做一個提交
+###### 誰am我就幹誰
+```shell=
+git commit
+```
+> 你覺得該紀錄時，做就對了
+
+----
+
+### 顯示修改
+###### 學長表示：IDE的最好用，這東西一年用不到三次
+```shell=
+git diff
+```
+> 顯示從上一次Commit到現在的修改
+
+----
+
+### 是不是覺得Git超神奇超萬能？
+##### 接下來還有更神奇的...
+
+----
+
+### 於是分支出現了
+```shell=
+git branch
+```
+> 樹總有分枝，對吧！
+
+----
+
+### 去分支的方法也有了
+```shell=
+git checkout
+```
+> 可以在各個樹枝上跑來跑去了～
+
+----
+
+### 當你覺得這分支該回到主幹時
+```shell=
+git merge
+```
+> 在主贛上合併其他人才是正確的...
+
+----
+
+### 換個人當頭頭好像也不錯？
+```shell=
+git rebase
+```
+> 你知道你在幹麻時用
+> 會修改以前的紀錄
+
+---
+
+## 實做環節
+
+---
+
+## 我們下週再見
+
+----
+
+![](https://i.imgur.com/d0XX8pY.png)
+恐龍❤️你

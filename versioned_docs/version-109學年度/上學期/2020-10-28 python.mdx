@@ -1,0 +1,302 @@
+---
+title:  第四次社課
+sidebar_position: 4
+description: python
+---
+
+:::info
+[原始 MD by 祐民](https://hackmd.io/@ji03mmy18/rkAP1gB_v?type=slide#/)
+:::
+
+# "四"月是你的謊言
+
+![](https://i.imgur.com/Gx8wi7U.jpg)
+
+_YoMin Su_
+
+---
+
+## 上週的 Git 還記得嗎?
+
+###### 不記得沒關係，快速來複習一下
+
+---
+
+### 開始/抓取
+
+```shell=
+git init
+
+git clone
+```
+
+---
+
+### 看狀態
+
+```shell=
+git status
+
+git log --oneline --graph --decorate --all
+```
+
+---
+
+### 建紀錄
+
+```shell=
+git add .
+
+git commit
+```
+
+---
+
+### 分支
+
+```shell=
+git branch
+
+git checkout
+
+git merge
+```
+
+---
+
+# 回想起來了嗎?
+
+###### 是記憶力 ○○ 的朋友呢~
+
+↑
+自行填入
+
+---
+
+## 那本周要幹嘛?
+
+---
+
+### 先提一下你在 VSCode 中要怎麼用 Git
+
+---
+
+### 再來是怎麼寫 Python(初階)
+
+---
+
+## VSCode 先來
+
+---
+
+### 首先，這是你的 VSCode
+
+![](https://i.imgur.com/32u0Bz8.png)
+簡單，漂亮，好用
+
+---
+
+### 有注意過左邊那列是做啥的嗎?
+
+![](https://i.imgur.com/ngAThHO.png)
+我猜你沒有
+
+---
+
+### 有版本控制欸
+
+![](https://i.imgur.com/6y1rsba.png)
+對，但比起 GUI，我猜測你會更想用 Cli
+
+---
+
+### 你一定會好奇，為什麼?
+
+聽我解釋一下...
+
+---
+
+### 第一個，全都是中文
+
+![](https://i.imgur.com/s02c0Rx.png)
+相信我，習慣英文後看中文，會有種'變智障'的感覺
+
+---
+
+### 第二個，全都是按鈕
+
+![](https://i.imgur.com/2XFZaXX.png)
+一切需要滑鼠的操作，都增加時間的消耗
+
+---
+
+### 第三個，沒辦法直接看到整棵樹長怎樣
+
+![](https://i.imgur.com/CmmXqoN.png)
+雖然有 Git Graph 這個延伸模組，但我真用不起來...
+
+---
+
+### 雖說如此，還是有不錯的地方就是了
+
+---
+
+### 暫存區可以看到修改的檔案
+
+![](https://i.imgur.com/UPs1wm2.png)
+但僅此而已，對我自己來說~
+
+---
+
+### 說了這麼多，沒有解決方案嗎?
+
+---
+
+## 當然有
+
+用「VSCode 的編輯器+終端機的指令」就好
+
+---
+
+### 嘗試一下組合鍵
+
+「Ctrl」+「\`」
+
+> 就是數字鍵 1 左邊那顆
+
+---
+
+### 你的終端機應該出現了吧~
+
+![](https://i.imgur.com/hw43Nbt.png)
+恭喜，可以開始幹活了 XD
+
+---
+
+## 好，接下來...
+
+---
+
+## Python 初階教學時間
+
+![](https://i.imgur.com/pZzlcwP.png)
+
+---
+
+## 詢問時間
+
+有多少人學過這門語言?
+
+---
+
+### 起頭的部分
+
+用你的 VSCode 開一個新的檔案，儲存為"main.py"
+
+> 等等才方便幹活
+
+---
+
+### 今天的第一個指令
+
+```python=
+print
+```
+
+> 跟 printf 是一樣的概念
+
+---
+
+### 今天的第二個指令
+
+```python=
+input
+```
+
+> 跟 scanf 是一樣的概念
+
+---
+
+### 變數時間
+
+在程式語言中，沒有定義變數，很難做事吧
+
+> 我該怎麼做呢?
+
+---
+
+### 宣告變數的方法
+
+```python=
+a = 1
+b = True
+c = 0.999
+d = 'Hello'
+```
+
+> 上面的型態依序是:
+> int, bool, float, str
+
+---
+
+### 將讀進來的資料相加
+
+```python=
+a = int(input("Num 1:"))
+b = int(input("Num 2:"))
+print(a + b)
+```
+
+> 是不是很簡單呢?
+
+---
+
+### 有輸入/輸入，該來點條件了
+
+```python=
+if True:
+    print("I'm here!!")
+```
+
+> 在 Python 中，縮排重要的跟鬼一樣
+> 而且也沒有大括號
+
+---
+
+### 判斷你成年沒有
+
+```python=
+age = int(input("Enter your age:"))
+if age > 18:
+    print("你真他媽老~")
+else:
+    print("小屁孩!")
+```
+
+---
+
+### 迴圈寶寶，迴圈寶寶，說你好~
+
+```python=
+for i in range(10):
+    print(i)
+```
+
+> 一定會噴出 0~9
+> 也可以直接把 List 放進去
+
+---
+
+## 各位都學會了嗎?
+
+---
+
+## 今天辛苦了
+
+段考後再見
+
+---
+
+### 熊熊愛你
+
+![](https://i.imgur.com/K5aqOTc.png)

@@ -3,6 +3,7 @@
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const versions = require('./versions.json');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -62,15 +63,21 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: '/category/社團課程資料',
+            docId: '/category/Yunnet',
             position: 'left',
-            label: '社團課程資料',
+            label: '宿舍網路',
           },
           {
             type: 'doc',
-            docId: '/category/網管幹訓',
+            docId: '/category/上學期',
             position: 'left',
-            label: '宿舍網路',
+            label: '社團課程',
+          },
+          {
+            type: 'docsVersionDropdown',
+            position: 'right',
+            dropdownItemsAfter: [{ to: '/versions', label: 'All versions' }],
+            dropdownActiveClassDisabled: true,
           },
         ],
       },
