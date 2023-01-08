@@ -54,7 +54,7 @@ const config = {
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-
+    /**@type {import('docusaurus-theme-search-typesense').ThemeConfig} */
     ({
       navbar: {
         title: `Yunnet wiki `,
@@ -87,7 +87,21 @@ const config = {
 
         copyright: `Copyright © ${new Date().getFullYear()} 雲科網管`,
       },
-      
+      typesense: {
+        typesenseCollectionName: 'docusaurus-2', 
+        typesenseServerConfig: {
+          nodes: [
+            {
+              host: '1ixs8yke0pl5rcubp-1.a1.typesense.net',
+              port: 443,
+              protocol: 'https',
+            },
+          ],
+          apiKey: 'eQCyLiSKAZzCqYG5IbYOo8VBBR3JDV12',
+        },
+        typesenseSearchParameters: {},
+        contextualSearch: true,
+      },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
@@ -95,18 +109,6 @@ const config = {
       
       
     }),
-    themes: [
-      [
-        "@easyops-cn/docusaurus-search-local",
-        /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
-        ({
-          hashed: true,
-          language: ["en", "zh"],
-          highlightSearchTermsOnTargetPage: true,
-          explicitSearchResultPath: true,
-        }),
-      ],
-    ],
+    
 };
-
 module.exports = config;
