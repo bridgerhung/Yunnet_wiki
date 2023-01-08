@@ -35,7 +35,7 @@ const config = {
 
       ({
         docs: {
-          routeBasePath: '/docs/',
+          routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/bridgerhung/Yunnet_wiki/edit/main/',
           // Please change this to your repo.
@@ -70,7 +70,7 @@ const config = {
           },
           {
             type: 'doc',
-            docId: '/category/社團課程資料',
+            docId: '/category/上學期社團課程資料',
             position: 'left',
             label: '社團課程',
           },
