@@ -35,9 +35,9 @@ const config = {
 
       ({
         docs: {
-          routeBasePath: '/',
+          routeBasePath: '/docs/',
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: "https://github.com/bridgerhung/Yunnet_wiki/edit/main/"
+          editUrl: 'https://github.com/bridgerhung/Yunnet_wiki/edit/main/',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
         },
