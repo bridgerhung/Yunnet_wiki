@@ -17,7 +17,7 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/category/上學期"
+            to="/category/社團課程資料"
           >
             點我進入社團課程頁面
           </Link>

@@ -37,6 +37,7 @@ const config = {
         docs: {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
+          editUrl: "https://github.com/bridgerhung/Yunnet_wiki/edit/main/"
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
         },
@@ -63,13 +64,13 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: '/category/Yunnet',
+            docId: '/category/宿舍網路',
             position: 'left',
             label: '宿舍網路',
           },
           {
             type: 'doc',
-            docId: '/category/上學期',
+            docId: '/category/社團課程資料',
             position: 'left',
             label: '社團課程',
           },
