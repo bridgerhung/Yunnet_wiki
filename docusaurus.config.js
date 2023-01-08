@@ -77,7 +77,6 @@ const config = {
           {
             type: 'docsVersionDropdown',
             position: 'right',
-            dropdownItemsAfter: [{ to: '/versions', label: '學期' }],
             dropdownActiveClassDisabled: true,
           },
         ],
