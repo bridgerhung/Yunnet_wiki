@@ -32,7 +32,7 @@ export default function Home() {
   return (
     <Layout
       title={` ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
+      description="網管維基"
     >
       <HomepageHeader />
       <main>
