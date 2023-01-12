@@ -8,3 +8,211 @@ description: 	SQL II
 [原始 MD by 珉萁](https://hackmd.io/@minouo/BJcrk3l-q)
 :::
 
+
+~~MySQL從刪庫到跑路~~
+# SQL II 基礎MySQL
+
+---
+
+## MySQL介紹
+
+* 功能豐富及強大。MySQL 支援絕大多數 RDBMS 都應有的功能。
+* 用戶管理功能
+* 內置許多安全功能
+* 更精細的交易及鎖定（ Transaction & Locking）
+
+----
+
+## 來試試看ㄅ
+
+我有先開了一個環境
+https://mysql.minouo.eu.org
+帳號密碼都是學號
+
+---
+
+## 由於基本的CRUD(SUID)都跟SQLite差不多這次就跳過囉
+
+----
+
+## Primary key(主鍵)
+* 是唯一值，通常會用int搭配auto_increase
+* 用來獨一無二地確認一個表格中的每一行資料
+* 每個 table 只能有一個 PRIMARY Key
+* 可以由多個欄位組成(複合主鍵)
+
+----
+
+## PK -> uid
+![](https://i.imgur.com/5FCwUgs.png)
+
+----
+
+## Unique key
+* 跟PK一樣，必須是唯一的，Ex.身分證字號
+* 一張table可以有多個
+* 也可以由多個欄位組成
+
+---
+
+## Foreign key(外鍵)
+* 在表跟表之間建立關聯
+* 避免奇怪的值被加進去
+* 插入的值一定要在對應的表
+* 只能指向被設定為主鍵的欄位
+
+----
+
+![](https://i.imgur.com/1fsy0DV.png)
+
+---
+
+## 來練習看看ㄅ
+
+----
+
+新增一張user table，裡面有以下欄位
+
+| uid | name | password | department |
+| --- | ---- | -------- | ------- |
+|     | 姓名 | 密碼     | 系級    |
+
+----
+
+再來新增一張ip table，一個ip要對應一個user
+
+| ip  | owner(FK)  | isLock     | bed  | mac |
+| --- | ------ | ---------- | ---- | --- |
+| ip  | 擁有人 | 是否被鎖卡 | 床位 | mac |
+
+---
+
+### 有了Foreign key後，我們能把table用FK連起來ㄌ那如果要查詢ㄉ話，該怎麼辦呢
+
+----
+
+## Join(合併查詢)
+將儲存在不同資料表的欄位資料，利用資料表之間欄位的關連性來結合多資料表之所需要的資訊
+
+----
+
+* inner join
+* left join
+* right join
+
+---
+
+## inner join
+```sql=
+SELECT table_column1, table_column2...
+FROM table_name1
+INNER JOIN table_name2 
+ON table_name1.column_name=table_name2.column_name;
+```
+![](https://i.imgur.com/XImRqCk.png)
+
+----
+
+![](https://i.imgur.com/vjNSAos.png)
+
+----
+
+![](https://i.imgur.com/602TDjo.png)
+
+---
+
+## left join
+```sql=
+SELECT table_column1, table_column2...
+FROM table_name1
+LEFT JOIN table_name2 
+ON table_name1.column_name=table_name2.column_name;
+```
+![](https://i.imgur.com/AFXQhr6.png)
+
+----
+
+![](https://i.imgur.com/xDXiynq.png)
+
+----
+
+![](https://i.imgur.com/Bx4jujG.png)
+
+---
+
+## right join
+```sql=
+SELECT table_column1, table_column2···
+FROM table_name1
+RIGHT JOIN table_name2 
+ON table_name1.column_name=table_name2.column_name;
+```
+![](https://i.imgur.com/m7jGmul.png)
+
+----
+
+![](https://i.imgur.com/7qbmTnM.png)
+
+----
+
+![](https://i.imgur.com/0tWhDfA.png)
+
+---
+
+## LIKE(模糊搜尋)
+
+----
+
+試想一個情況，如果我們要把全台灣身分證字號"R"開頭的人找出來，要怎麼做呢
+
+----
+
+那就試試LIKEㄅ，他能透過萬用字元來做搜尋
+![](https://i.imgur.com/s2AXkK6.png)
+
+----
+
+回到剛剛的問題
+```sql=
+select * from `people` where `National_ID_No` LIKE "R%"
+```
+
+---
+
+## 最後再來個小練習
+
+----
+
+把下列資料進剛剛建立的user table
+| uid | name  | password  | department |
+| --- | ----- | --------- | ---------- |
+|     | admin | admin     | 雲科網管   |
+|     | user  | user      | 四資工一A  |
+|     | fkt   | asdfghjkl | 四資管二A  |
+|     | steve | steve123  | 校長室     |
+
+----
+
+| ip          | owner(PK) | isLock | bed     | mac          |
+| ----------- | --------- | ------ | ------- | ------------ |
+| 127.0.0.1   | admin     | 1      | yunnet  | aaaaaaaaaaaa |
+| 10.0.0.1    | user      | 0      | A1105-3 | 0caa3b9a88da |
+| 8.8.8.8     | steve     | 1      | B2506-4 | be00a2b8ce7d |
+| 11.11.11.11 | fkt       | 0      | C3502-6 | a4c1c2d65e56 |
+| 8.8.4.4     | steve     | 0      | B3506-4 | 79996bcf9588 |
+
+----
+
+## 查出在B棟被鎖卡的人的個人資訊
+
+---
+
+## 其他ㄉ練習網站
+
+https://www.hackerrank.com/domains/sql
+https://sqlzoo.net/wiki/SELECT_basics/zh
+https://www.w3schools.com/sql/default.asp
+
+---
+
+## ~END~
