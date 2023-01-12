@@ -4,6 +4,214 @@ sidebar_position: 2
 description: Linux
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import CodeBlock from '@theme/CodeBlock';
+
 :::info
 [原始 MD by 祐民](https://hackmd.io/@ji03mmy18/HJK8G0GPD?type=slide#/)
 :::
+
+### 基本操作的部分
+
+```shell=
+ls
+#列出該資料夾的內容
+
+cd <PATH>
+#切換資料夾
+
+pwd
+#印出目前路徑
+```
+
+> 請善用 Tab 的自動補完功能
+
+### 還是基本操作
+
+```shell=
+mv <src> <dst>
+#移動檔案
+
+cp <src> <dst>
+#複製檔案
+```
+
+> 這裡更適合用 Tab 補完目錄
+
+### 新建與刪除很重要
+
+```shell=
+mkdir <dir>
+#新建資料夾，可以一次輸入多個
+
+rm <file>
+#刪除檔案
+
+rm -r <dir>
+#刪除資料夾，不加參數會掛掉
+```
+
+> 用不到的東西砍掉很正常吧~
+
+### stdout 是啥?可以吃嗎?
+
+```shell=
+cat <file>
+#印出檔案內容
+
+echo "String"
+#印出你打的東西
+```
+
+> 廢話，當然不能吃，但很重要
+
+### 背景程式好多喔，真礙眼
+
+```shell=
+ps
+#列出背景執行的程式，加上 -aux 可以列出全部
+
+kill <PID>
+#砍掉該執行中的程式
+```
+
+> 沒事別亂砍，別亂砍沒事
+
+### 所以我說編輯檔案呢?
+
+```shell=
+nano
+#比較符合直覺的編輯器
+
+vim
+#快速鍵組成的編輯器
+
+sed
+#看都不看就改下去的部分
+```
+
+> 別急別急，以後有的是時間編
+
+## 捷徑什麼的，該不會沒有吧?
+
+```shell=
+ln <TARGET>
+#硬連結，殺了一個我，還有千千萬萬個我
+
+ln -s <TARGET>
+#軟連結，算我怕你吧，別動我真身
+```
+
+> 有是有，但你真的想聽?
+
+### 萬般皆下品，唯有權限高
+
+```shell=
+su <User>
+#切換使用者，要該使用者的密碼
+
+sudo
+#取得管理員權限，需要自己的密碼(且帳號在sudo群組)
+```
+
+> 沒 sudo 真滴難辦事...
+
+### 是大於小於欸，跟`+<><`有關嗎?
+
+<CodeBlock>
+(src) > (dst)
+#將src放入dst中
+
+(src) >> (dst) #將 src 加入 dst 中
+
+(src) < (dst) #將 dst 送入 src 中
+
+(src) << (dst) #將 dst 加入 src 中
+
+</CodeBlock>
+
+> 好像哪裡怪怪的...
+
+## 實作環節
+
+---
+
+### ① 請建立出與下圖相同的資料夾結構
+
+![](https://i.imgur.com/IhuXbiw.png)
+
+---
+
+### ② 請在各資料下創建出指定檔案，並包含指定內容
+
+![](https://i.imgur.com/lRCO8Lf.png)
+
+>
+
+- `\<dir>/run.py`
+
+```python=
+print('Hello World!')
+```
+
+- `\<dir>/run.js`
+
+```javascript=
+console.log("Hello World!");
+```
+
+- `\<dir>/trash.txt`
+
+```shell=
+#使用以下指令生成此檔案內容
+head /dev/urandom | tr -dc A-Za-z0-9
+```
+
+---
+
+### ③ 請將 back 與 front 資料夾中的檔案移動到 temp 中
+
+![](https://i.imgur.com/zuGdlME.png)
+
+---
+
+### ④ 請在 back 中建立 run.py 的硬連結，在 front 中建立 run.js 的軟連結
+
+![](https://i.imgur.com/qVoS8OR.png)
+
+---
+
+### ⑤ 請將整個 temp 資料夾刪除
+
+![](https://i.imgur.com/Ne5Hy3M.png)
+
+---
+
+### ⑥ 請以 sudo 重新建立 temp 資料夾，並使用 sudo 建立 run.js 文件
+
+![](https://i.imgur.com/Z7IOvw9.png)
+
+---
+
+### ⑦ 嘗試修改 front 資料夾中的 run.js。
+
+###### 我猜會噴錯
+
+---
+
+### ⑧ 最後，分別使用 python3 與 node 去執行 back 與 front 資料夾中的檔案
+
+![](https://i.imgur.com/CdEJYmP.png)
+
+---
+
+# 好玩嗎?
+
+希望你是這樣認為的
+
+---
+
+## 我們下次再見
+
+![](https://p2.bahamut.com.tw/B/2KU/73/a08d73c0de387ab525e01921c817x895.JPG)
