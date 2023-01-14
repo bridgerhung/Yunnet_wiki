@@ -9,7 +9,7 @@ const versions = require('./versions.json');
 const config = {
   title: '雲科網管wiki',
   tagline: '這裡專放一些網管的相關資訊',
-  url: 'https://yunnet.brid.gq',
+  url: 'https://wiki.yunnet.eu.org',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
