@@ -1,7 +1,7 @@
 {
   "index_name": "netlify_26432c7f-f0e5-4e0e-b032-cca808867a70_main_all",
-  "start_urls": ["https://wiki.yunnet.eu.org"],
-  "sitemap_urls": ["https://wiki.yunnet.eu.org/sitemap.xml"],
+  "start_urls": ["https://yunnet.brid.gq"],
+  "sitemap_urls": ["https://yunnet.brid.gq/sitemap.xml"],
   "sitemap_alternate_links": true,
   "stop_urls": ["/tests"],
   "selectors": {
