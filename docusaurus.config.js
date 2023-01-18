@@ -91,9 +91,9 @@ const config = {
         darkTheme: darkCodeTheme,
       },
       algolia: {
-        appId: 'CQDWJ03MCR',
-        apiKey: 'bf92cdb5b1850bb199db2a2d95e51d9e',
-        indexName: 'netlify_26432c7f-f0e5-4e0e-b032-cca808867a70_main_all',
+        appId: 'J94A3O024B',
+        apiKey: '3b8a8219d5001a5dbcf9163d60a986ed',
+        indexName: 'yunnet',
         replaceSearchResultPathname: {
           from: '/docs/', // or as RegExp: /\/docs\//
           to: '/',
