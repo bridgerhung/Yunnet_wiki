@@ -101,7 +101,6 @@ const config = {
         replaceSearchResultPathname: {
           from: '/docs/', // or as RegExp: /\/docs\//
           to: '/',
-          searchParameters: {},
           searchPagePath: 'search',
         },
       },
