@@ -95,9 +95,9 @@ const config = {
         darkTheme: darkCodeTheme,
       },
       algolia: {
-        appId: '5S4I7NT90Z',
-        apiKey: 'b5ddefaca62917d1e710774fdab76ded',
-        indexName: 'brid',
+        appId: 'CQDWJ03MCR',
+        apiKey: 'bf92cdb5b1850bb199db2a2d95e51d9e',
+        indexName: 'netlify_26432c7f-f0e5-4e0e-b032-cca808867a70_main_all',
       },
     }),
 };
