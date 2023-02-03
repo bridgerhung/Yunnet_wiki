@@ -5,6 +5,22 @@ const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const versions = require('./versions.json');
 
+// This probably only makes sense for the alpha/beta/rc phase, temporary
+function getNextVersionName() {
+  return '公告訊息';
+  /*
+  const expectedPrefix = '2.0.0-rc.';
+  const lastReleasedVersion = versions[0];
+  if (!lastReleasedVersion || !lastReleasedVersion.includes(expectedPrefix)) {
+    throw new Error(
+      'this code is only meant to be used during the 2.0 alpha/beta/rc phase.',
+    );
+  }
+  const version = parseInt(lastReleasedVersion.replace(expectedPrefix, ''), 10);
+  return `${expectedPrefix}${version + 1}`;
+   */
+}
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: '雲科網管wiki',
@@ -38,6 +54,14 @@ const config = {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/bridgerhung/Yunnet_wiki/edit/main/',
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
+          versions: {
+            current: {
+              label: `${getNextVersionName()} 📢`,
+            },
+          
+        },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
         },
@@ -50,7 +74,7 @@ const config = {
         gtag: {
           trackingID: 'G-P155VGKNMD',
           anonymizeIP: false,
-        },
+        }
       }),
     ],
   ],
@@ -93,6 +117,10 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+      },
+      announcementBar: {
+        id: 'announcementBar-2', // Increment on change
+        content: `🎇網管的111-2文檔現已開始更新🎇`,
       },
       algolia: {
         appId: 'CQDWJ03MCR',
