@@ -120,7 +120,7 @@ const config = {
       },
       announcementBar: {
         id: 'announcementBar-2', // Increment on change
-        content: `🎇網管的111-2文檔現已開始更新🎇`,
+        content: `🎇網管的111-2文檔現已開始同步維護🎇`,
       },
       algolia: {
         appId: 'CQDWJ03MCR',
