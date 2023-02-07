@@ -121,12 +121,8 @@ const config = {
       announcementBar: {
         id: 'announcementBar-2', // Increment on change
         content: `🎇網管的111-2文檔現已開始同步維護🎇`,
-      },
-      algolia: {
-        appId: 'CQDWJ03MCR',
-        apiKey: 'bf92cdb5b1850bb199db2a2d95e51d9e',
-        indexName: 'netlify_26432c7f-f0e5-4e0e-b032-cca808867a70_main_all',
-      },
+      }
+      
     }),
 };
 
