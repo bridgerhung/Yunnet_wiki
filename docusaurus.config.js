@@ -112,7 +112,7 @@ const config = {
       footer: {
         style: 'dark',
 
-        copyright: `Copyright © ${new Date().getFullYear()} 雲科網管`,
+        copyright: `© ${new Date().getFullYear()} 雲科網管`,
       },
       prism: {
         theme: lightCodeTheme,
