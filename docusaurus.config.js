@@ -55,13 +55,7 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/bridgerhung/Yunnet_wiki/edit/main/',
           showLastUpdateAuthor: true,
-          showLastUpdateTime: true,
-          versions: {
-            current: {
-              label: `${getNextVersionName()} 📢`,
-            },
-          
-        },
+          showLastUpdateTime: true
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
         },
