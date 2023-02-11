@@ -98,15 +98,23 @@ const config = {
           },
           {
             type: 'doc',
-            docId: '/category/下學期社團課程資料',
+            docId: '/category/上學期社團課程資料',
             position: 'left',
             label: '社團課程',
           },
           {
-            type: 'docsVersionDropdown',
-            position: 'right',
-            dropdownActiveClassDisabled: true,
+            type: 'doc',
+            docId: '/category/往年社團課程資料',
+            position: 'left',
+            label: '往年社團課程',
           },
+          {
+            type: 'doc',
+            docId: 'announcement/官方文檔',
+            position: 'left',
+            label: '系統公告',
+          }
+
         ],
       },
       footer: {
