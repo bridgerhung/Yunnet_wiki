@@ -121,7 +121,13 @@ const config = {
       announcementBar: {
         id: 'announcementBar-2', // Increment on change
         content: `🎇網管的111-2文檔現已開始同步維護🎇`,
-      }
+      },
+      algolia: {
+        appId: 'EVWC1N1L17',
+        apiKey: 'bb9b2ce400d51545652321fd5efcd8c0',
+        indexName: 'yunnet-eu',
+        contextualSearch: true,
+      },
       
     }),
 };
