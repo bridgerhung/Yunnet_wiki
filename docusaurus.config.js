@@ -3,11 +3,9 @@
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-const versions = require('./versions.json');
+
 
 // This probably only makes sense for the alpha/beta/rc phase, temporary
-function getNextVersionName() {
-  return '公告訊息';
   /*
   const expectedPrefix = '2.0.0-rc.';
   const lastReleasedVersion = versions[0];
