@@ -17,7 +17,6 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
   const version = parseInt(lastReleasedVersion.replace(expectedPrefix, ''), 10);
   return `${expectedPrefix}${version + 1}`;
    */
-}
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {

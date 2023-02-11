@@ -1,0 +1,256 @@
+---
+title: 資料庫環境配置 & 基本 SQL
+sidebar_position: 1
+description: 	Database & Base SQL
+---
+
+:::info
+[原始 MD by 子軒](https://hackmd.io/@XMRHRX/HJ-P95kGu#/)
+:::
+
+
+## 資料庫環境配置 & 基本 SQL
+### 2021/3/3 王子軒
+
+```
+開源
+入土
+拖魚羹
+```
+<!--
+
+1.資料庫環境配置 & 基本 SQL
+SELECT
+UPDATE
+
+-->
+
+NOTE:今天要來教資料庫和SQL，幹訓有講過一些，有人還記得什麼是sql、什麼是資料庫嗎？
+
+---
+
+## 還記得.....
+##### SELECT? 資料庫是啥？ SQL可以幹麻？
+
+NOTE:今天要來教資料庫和SQL，幹訓有講過一些，有人還記得什麼是sql、什麼是資料庫嗎？
+
+----
+
+## 資料庫(database)
+
+```資料庫，簡而言之可視為電子化的檔案櫃——儲存電子檔案的處所，使用者可以對檔案中的資料執行新增、擷取、更新、刪除等操作...blablabla...```
+
+
+----
+
+#### 像是一個櫃子（database），裡面裝了好多資料夾(表、table）
+![](https://i.imgur.com/MWgpTaQ.png)
+
+
+----
+
+## table??(資料表)
+
+#### 一個資料表，裡面有好多資料
+![](https://i.imgur.com/rE2Bols.png)
+
+----
+
+## SQL?
+
+#### ***S*** tructured ***Q*** uery ***L*** anguage
+
+> a domain-specific language
+> designed for managing data
+
+~~阿就拿來讓資料庫處理資料的語言啦ˋˊ~~
+
+NOTE: 但是資料庫其實有很多種，例如：關係式資料庫，物件導向資料庫等等，SQL基本上是用在關係式資料庫。SQL也是我們課程主要要講的，我們寫的、送給資料庫跑得就叫做query
+
+---
+
+### 環境配置
+
+http://sqlitestudio.pl/
+https://github.com/QtTutorial/QtBasic/blob/master/Qt%20Sqlite/Taiwan
+
+
+(教學文章：https://chenglearning.blogspot.com/2013/11/sqlitestudio1sqlite.html)
+
+NOTE:下載這兩個
+
+----
+
+### 匯入Database
+
+1. 按下 "&Add a database(Ctrl+O)"
+![](https://i.imgur.com/RJw6boK.png)
+
+----
+
+2. 按下 "Browsing for existing database file..."
+![](https://i.imgur.com/W7b9XYC.png)
+
+----
+
+3. 改成 "All files(*)"
+![](https://i.imgur.com/uquD6em.png)
+
+----
+
+4. 選剛剛下載的Taiwan，然後按 "OK"
+![](https://i.imgur.com/uhAjkWN.png)
+
+----
+
+5. 按下 "Open SQL &editor(Alt+E)"
+![](https://i.imgur.com/YXNdP1L.png)
+
+---
+
+## query time!
+
+----
+
+### 查詢
+
+> https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all
+
+```
+SELECT <column1, column2,...> [FROM <table>][WHERE <condition>]
+```
+
+NOTE:把資料庫的資料查詢(選)出來。這邊有個用法，如果你想選所有欄位，可以用萬用字元＊
+
+----
+
+### row, column, cell補充
+
+![](https://i.imgur.com/BTkxsFa.png)
+
+----
+
+### 查詢條件WHERE
+
+```
+1. WHERE ID > 5
+2. WHERE username = "Bob" OR username = "Alice"
+3. WHERE uesrname != "Tom"
+```
+
+> SELECT * FROM customer 
+> WHERE uesrname != "Tom"
+
+
+NOTE:後面的condition就是對欄位的判斷，很像其他程式語言對變數的判斷，基本的有大於、小於、等於、不等於、AND、OR。
+
+---
+
+### 語法很怪很難記？
+
+資料庫的概念比較像是"集合"，所以如果用圖像的方式來想，語法上就會比較好記憶。
+
+![](https://i.imgur.com/NihHVbU.png)
+
+NOTE:例如select就是從中間選出、WHERE像是上面得某個範圍、地點
+
+----
+
+
+### 練習
+
+> https://www.hackerrank.com/domains/sql?filters%5Bsubdomains%5D%5B%5D=select
+
+<!-- ================================== -->
+
+---
+
+### 修改
+
+```
+UPDATE <table>
+SET <column>=<value>[, column2=value2, column3=value3...]
+[WHERE <condition>]
+```
+
+---
+
+### 欄位型態概念
+
+NOTE: 資料庫儲存的時候，每個欄位都有對應的型態，像是C++、C、Java那樣，在處理資料庫的時候，例如：新增、修該和查詢條件，欄位要遇到值的時候都要注意欄位型態。
+
+
+----
+
+### 數值
+![](https://i.imgur.com/dorVcL5.png)
+
+----
+
+### 浮點數
+![](https://i.imgur.com/253Iqf4.png)
+
+
+----
+
+### 字串
+![](https://i.imgur.com/U0FzEQA.png)
+
+----
+
+### 時間＆日期
+![](https://i.imgur.com/04xztp6.png)
+
+----
+
+### 練習
+
+NOTE:因為更新沒有題目可以練習，接下來就在剛剛安裝的環境下測試。
+
+----
+
+1. 把台南City_Code改成1337
+2. 把City_Code<100的City_cname改成天龍國
+
+
+
+
+----
+
+<!-- 1.資料庫環境配置 & 基本 SQL
+TABLE
+
+
+SELECT
+UPDATE
+
+https://dbdiagram.io/home
+
+
+2.基本SQL & 概念
+
+Index, pri key
+
+INSERT
+DELETE
+
+DROP
+
+
+3.進階 SQL & SQL 查詢練習/挑戰
+
+INNER JOIN
+UNION SELECT
+
+
+4.SQL床位異動練習 or SQL injection 
+
+security
+injection
+
+
+
+-->
+
+
+
