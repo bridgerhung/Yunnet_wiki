@@ -21,7 +21,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: '雲科網管wiki',
-  tagline: '這裡專放一些網管的相關資訊',
+  tagline: '這裡專放一些網管的社團課程',
   url: 'https://wiki.yunnet.eu.org',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -119,7 +119,7 @@ const config = {
       },
       announcementBar: {
         id: 'announcementBar-2', // Increment on change
-        content: `🎇網管的111-2文檔現已開始同步維護🎇搜尋功能已經上線`,
+        content: `🎇網管的111-2文檔現已開始同步維護🎇搜尋功能已經上線，新增首頁按鈕`,
       },
       algolia: {
         appId: 'EVWC1N1L17',
