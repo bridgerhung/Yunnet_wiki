@@ -1,12 +1,11 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-
+const lightCodeTheme = require("prism-react-renderer/themes/github");
+const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 // This probably only makes sense for the alpha/beta/rc phase, temporary
-  /*
+/*
   const expectedPrefix = '2.0.0-rc.';
   const lastReleasedVersion = versions[0];
   if (!lastReleasedVersion || !lastReleasedVersion.includes(expectedPrefix)) {
@@ -20,39 +19,39 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: '雲科網管wiki',
-  tagline: '這裡專放一些網管的社團課程',
-  url: 'https://wiki.yunnet.eu.org',
-  baseUrl: '/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/Yunnet_icon.svg',
+  title: "雲科網管wiki",
+  tagline: "這裡專放一些網管的社團課程",
+  url: "https://wiki.yunnet.eu.org",
+  baseUrl: "/",
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
+  favicon: "img/Yunnet_icon.svg",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'bridgerhung', // Usually your GitHub org/user name.
-  projectName: 'Yunnet_wiki', // Usually your repo name.
+  organizationName: "bridgerhung", // Usually your GitHub org/user name.
+  projectName: "Yunnet_wiki", // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'zh-Hant',
-    locales: ['zh-Hant'],
+    defaultLocale: "zh-Hant",
+    locales: ["zh-Hant"],
   },
 
   presets: [
     [
-      'classic',
+      "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
 
       ({
         docs: {
-          routeBasePath: '/',
-          sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/bridgerhung/Yunnet_wiki/edit/main/',
+          routeBasePath: "/",
+          sidebarPath: require.resolve("./sidebars.js"),
+          editUrl: "https://github.com/bridgerhung/Yunnet_wiki/edit/main/",
           showLastUpdateAuthor: true,
-          showLastUpdateTime: true
+          showLastUpdateTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
         },
@@ -60,12 +59,12 @@ const config = {
         // Please change this to your repo.
         // Remove this to remove the "edit this page" links.
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve("./src/css/custom.css"),
         },
         gtag: {
-          trackingID: 'G-P155VGKNMD',
+          trackingID: "G-P155VGKNMD",
           anonymizeIP: false,
-        }
+        },
       }),
     ],
   ],
@@ -77,39 +76,38 @@ const config = {
       navbar: {
         title: `Yunnet wiki `,
         logo: {
-          alt: 'Yunnet logo',
-          src: 'img/logo.svg',
+          alt: "Yunnet logo",
+          src: "img/logo.svg",
         },
         items: [
           {
-            type: 'doc',
-            docId: '/category/宿舍網路',
-            position: 'left',
-            label: '宿舍網路',
+            type: "doc",
+            docId: "/category/宿舍網路",
+            position: "left",
+            label: "宿舍網路",
           },
           {
-            type: 'doc',
-            docId: '/category/上學期社團課程資料',
-            position: 'left',
-            label: '社團課程',
+            type: "doc",
+            docId: "/category/上學期社團課程資料",
+            position: "left",
+            label: "社團課程",
           },
           {
-            type: 'doc',
-            docId: '/category/往年社團課程資料',
-            position: 'left',
-            label: '往年社團課程',
+            type: "doc",
+            docId: "/category/往年社團課程資料",
+            position: "left",
+            label: "往年社團課程",
           },
           {
-            type: 'doc',
-            docId: 'announcement/官方文檔',
-            position: 'left',
-            label: '系統公告',
-          }
-
+            type: "doc",
+            docId: "announcement/官方文檔",
+            position: "left",
+            label: "系統公告",
+          },
         ],
       },
       footer: {
-        style: 'dark',
+        style: "dark",
 
         copyright: `© ${new Date().getFullYear()} 雲科網管`,
       },
@@ -118,16 +116,17 @@ const config = {
         darkTheme: darkCodeTheme,
       },
       announcementBar: {
-        id: 'announcementBar-2', // Increment on change
-        content: `🎇網管的111-2文檔現已開始同步維護🎇搜尋功能已經上線，新增首頁按鈕`,
-      },
+        id: "announcementBar-3", // Increment on change
+        content:
+        '<b><a href="/111/下學期/Regular%20Expression">3/1 更新 正規表達式</a></b>',
+        isCloseable: true,
+        },
       algolia: {
-        appId: 'EVWC1N1L17',
-        apiKey: 'bb9b2ce400d51545652321fd5efcd8c0',
-        indexName: 'yunnet-eu',
+        appId: "EVWC1N1L17",
+        apiKey: "bb9b2ce400d51545652321fd5efcd8c0",
+        indexName: "yunnet-eu",
         contextualSearch: true,
       },
-      
     }),
 };
 
