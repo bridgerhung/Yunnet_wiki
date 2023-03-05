@@ -4,6 +4,9 @@ sidebar_position: 1
 description: 假日研討會 for YunNET
 ---
 
+:::作者資料 
+https://hackmd.io/@JimmyHsieh-0129/SJWwIcmRj#/
+:::
 
 ## Time
 * Sunday -- 15:00
@@ -22,10 +25,12 @@ description: 假日研討會 for YunNET
 
 **Week 2 (03/05)** 
 
-* OpenAPI :swagger [智遠、祐民]
+* OpenAPI 
+	- swagger [智遠、~~祐民~~]
 * Protocal:
 	- MQTT[綱庭]
-* Database :ORM [梓安]
+* Database 
+	- ORM [梓安]
 * Authentication [祐民]
 
 ----
