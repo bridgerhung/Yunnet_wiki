@@ -116,11 +116,10 @@ const config = {
         darkTheme: darkCodeTheme,
       },
       announcementBar: {
-        id: "announcementBar-3", // Increment on change
-        content:
-        '<b><a href="/111/下學期/Regular%20Expression">3/1 更新 正規表達式</a></b>',
+        id: "announcementBar-4", // Increment on change
+        content: '<b><a href="/111/Sunday">3/5 更新 假日研討會</a></b>',
         isCloseable: true,
-        },
+      },
       algolia: {
         appId: "EVWC1N1L17",
         apiKey: "bb9b2ce400d51545652321fd5efcd8c0",
