@@ -88,7 +88,7 @@ const config = {
           },
           {
             type: "doc",
-            docId: "/category/上學期社團課程資料",
+            docId: "/category/下學期社團課程資料",
             position: "left",
             label: "社團課程",
           },
