@@ -116,8 +116,8 @@ const config = {
         darkTheme: darkCodeTheme,
       },
       announcementBar: {
-        id: "announcementBar-4", // Increment on change
-        content: '<b><a href="/111/Sunday">3/5 更新 假日研討會</a></b>',
+        id: "announcementBar-5", // Increment on change
+        content: '<b><a href="/111/下學期/2023-03-08%20python%20data%20science">3/8 更新 python 資料科學</a></b>',
         isCloseable: true,
       },
       algolia: {

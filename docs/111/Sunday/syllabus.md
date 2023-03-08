@@ -4,7 +4,7 @@ sidebar_position: 1
 description: 假日研討會 for YunNET
 ---
 
-:::作者資料 
+:::info 作者資料 
 https://hackmd.io/@JimmyHsieh-0129/SJWwIcmRj#/
 :::
 
