@@ -13,14 +13,14 @@ Date: 2023/03/08
 ---
 
 ## 資料科學(Data Science)!
-*聽起來好像很厲害?*
+*聽起來好像很厲害?*  
 
 ----
 
-其實...並沒有
-![](https://i.imgur.com/iXu2VGd.jpeg)
-![](https://i.imgur.com/rUEJYdS.jpeg)
-![](https://i.imgur.com/Jdruvbw.jpeg)
+其實...並沒有  
+![](https://i.imgur.com/iXu2VGd.jpeg)  
+![](https://i.imgur.com/rUEJYdS.jpeg)  
+![](https://i.imgur.com/Jdruvbw.jpeg)  
 
 ----
 
