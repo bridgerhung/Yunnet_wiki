@@ -116,8 +116,8 @@ const config = {
         darkTheme: darkCodeTheme,
       },
       announcementBar: {
-        id: "announcementBar-5", // Increment on change
-        content: '<b><a href="/111/下學期/2023-03-08%20python%20data%20science">3/8 更新 python 資料科學</a></b>',
+        id: "announcementBar-6", // Increment on change
+        content: '<b><a href="/111/下學期/2023-03-08%20python%20data%20science">3/8 更新 python 資料科學</a></b> </br>修復其他頁面bug 、ORM 上傳',
         isCloseable: true,
       },
       algolia: {
