@@ -115,7 +115,7 @@ const config = {
       footer: {
         style: "light",
 
-        copyright: `© ${new Date().getFullYear()} <a href="https://yunnet.yuntech.edu.tw" target="_blank" rel="noopener noreferrer"雲科網管</a>雲科網管`,
+        copyright: `© ${new Date().getFullYear()} <a href="https://yunnet.yuntech.edu.tw" target="_blank" rel="noopener noreferrer">雲科網管</a>`,
       },
       prism: {
         theme: lightCodeTheme,
