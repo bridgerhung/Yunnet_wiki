@@ -92,7 +92,7 @@ yarn create vite
 
 ### Enter Project
 
-```bash=
+```bash showLineNumbers
 cd VueFireAuth
 code . #開啟VSCODE
 yarn install #安裝套件
@@ -143,9 +143,9 @@ Let's Select GitHub
 
 ### Start GitHub Application
 
-[GitHub Setting](https://github.com/settings/profile)
-找到他 Developer Settings
-![](https://i.imgur.com/x3ZAZQS.png)
+[GitHub Setting](https://github.com/settings/profile)  
+找到他 Developer Settings  
+![](https://i.imgur.com/x3ZAZQS.png)  
 
 ----
 
@@ -208,7 +208,7 @@ yarn add firebase
 
 ### Add Fire Auth firebaseCore.js
 
-```javascript=
+```javascript showLineNumbers
 const auth = getAuth(app);
 const githubProvider = new GithubAuthProvider();
 export { auth, githubProvider }
