@@ -8,6 +8,8 @@ description: 假日研討會 for YunNET
 https://hackmd.io/@JimmyHsieh-0129/SJWwIcmRj#/
 :::
 
+# 假日研討會 for YunNET
+
 ## Time
 * Sunday -- 15:00
 
@@ -23,7 +25,8 @@ https://hackmd.io/@JimmyHsieh-0129/SJWwIcmRj#/
 
 ### 1. Backend
 
-**Week 2 (03/05)** 
+
+#### Backend Topic List
 
 * OpenAPI 
 	- swagger [智遠、~~祐民~~]
@@ -31,27 +34,58 @@ https://hackmd.io/@JimmyHsieh-0129/SJWwIcmRj#/
 	- MQTT[綱庭]
 * Database 
 	- ORM [梓安]
-* Authentication [祐民]
+* Authentication 
+    - Overview[祐民]
+
+#### Session Overview
+
+##### Week 2 (03/05)
+
+
+* OpenAPI 
+	- swagger [智遠、~~祐民~~]
+* Protocal:
+	- MQTT[綱庭]
+* Database 
+	- ORM [梓安]
+* Authentication 
+    - Overview[祐民]
 
 ----
 
 ### 2. Frontend
 
+#### Frontend Topic List
+
+* basic frontend
+    - Css
+    - HTML
+    - JS
 * state management
 	- VueX 
 	- Localstorage
 	- VueRouter
-	- pinia
+	- pinia [智遠]
 * async request
-	- Fetch
-	- Axios
+	- Fetch [Min]
+	- Axios [祐民]
 * header
 	- User Agent
 * Framework
-	- Vue3
+	- Vue3 
 * BuildTool
-	- Vite
+	- Vite [~~祐民~~]
 	- Webpack
+* Authentication
+	- OAuth [綱庭]
+
+
+#### Session Overview
+
+##### Week 3 (03/12)
+
+* Authentication
+    - OAuth [綱庭]
 
 ----
 
@@ -71,3 +105,6 @@ https://hackmd.io/@JimmyHsieh-0129/SJWwIcmRj#/
 ----
 
 ### 6. Application
+
+---
+
