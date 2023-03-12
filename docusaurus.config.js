@@ -20,7 +20,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "雲科網管wiki",
-  tagline: "這裡專放一些網管的社團課程",
+  tagline: "網管的社團課程",
   url: "https://wiki.yunnet.eu.org",
   baseUrl: "/",
   onBrokenLinks: "throw",
@@ -94,6 +94,12 @@ const config = {
           },
           {
             type: "doc",
+            docId: "/category/周末研討會",
+            position: "left",
+            label: "周末研討會",
+          },
+          {
+            type: "doc",
             docId: "/category/往年社團課程資料",
             position: "left",
             label: "往年社團課程",
@@ -102,7 +108,7 @@ const config = {
             type: "doc",
             docId: "announcement/官方文檔",
             position: "left",
-            label: "系統公告",
+            label: "官方文檔",
           },
         ],
       },
@@ -116,8 +122,8 @@ const config = {
         darkTheme: darkCodeTheme,
       },
       announcementBar: {
-        id: "announcementBar-7", // Increment on change
-        content: '<b><a href="/111/下學期/2023-03-08%20python%20data%20science">3/8 更新 python 資料科學</a></b>           修復其他頁面bug 、<b><a href="/111/Sunday/2023-03-05%20ORM">ORM 上傳</a></b>',
+        id: "announcementBar-8", // Increment on change
+        content: '<b><a href="/category/周末研討會">3/12 研討會</a></b>',
         isCloseable: true,
       },
       algolia: {

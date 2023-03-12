@@ -19,16 +19,16 @@ function HomepageHeader() {
             className="button button--secondary button--lg"
             to="/category/下學期社團課程資料"
           >
-            🆕最新課程🎉
+            🎉週三課程
           </Link>
         </div>
         <div><h1> </h1></div>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/category/往年社團課程資料"
+            to="/category/周末研討會"
           >
-            🔙過去課程
+            🐱‍🏍周末研討會
           </Link>
         </div>
       </div>
