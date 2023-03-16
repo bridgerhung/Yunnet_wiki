@@ -123,7 +123,7 @@ const config = {
       },
       announcementBar: {
         id: "announcementBar-9", // Increment on change
-        content: '<b><a href="/111/下學期/2023-03-16%20Crawler">3/16 網路爬蟲</a></b>',
+        content: '<b><a href="/111/下學期/2023-03-16%20Crawler">3/15 網路爬蟲</a></b>',
         //content: '<b><a href="/category/周末研討會">3/12 研討會</a></b>',
         isCloseable: true,
       },
