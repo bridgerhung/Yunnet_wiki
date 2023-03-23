@@ -86,6 +86,11 @@ https://hackmd.io/@JimmyHsieh-0129/SJWwIcmRj#/
 
 * Authentication
     - OAuth [綱庭]
+* state management
+    - pinia [智遠]
+* async request
+	- Fetch [Min]
+	- Axios [祐民]
 
 ----
 
@@ -93,6 +98,9 @@ https://hackmd.io/@JimmyHsieh-0129/SJWwIcmRj#/
 
 * Docker
 * K8S
+* Basic Knowledge
+    - QoS [綱庭]
+    - Cloud Network[綱庭]
 
 ----
 
