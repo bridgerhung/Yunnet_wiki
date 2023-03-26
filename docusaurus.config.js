@@ -122,9 +122,9 @@ const config = {
         darkTheme: darkCodeTheme,
       },
       announcementBar: {
-        id: "announcementBar-9", // Increment on change
-        content: '<b><a href="/111/下學期/2023-03-22%20Nuxt">3/23 Nuxt3</a></b>',
-        //content: '<b><a href="/category/周末研討會">3/12 研討會</a></b>',
+        id: "announcementBar-10", // Increment on change
+        //content: '<b><a href="/111/下學期/2023-03-22%20Nuxt">3/23 Nuxt3</a></b>',
+        content: '<b><a href="/111/Sunday/2023-03-26%20docker-network">3/26 研討會</a></b>',
         isCloseable: true,
       },
       algolia: {
