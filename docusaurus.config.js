@@ -123,8 +123,8 @@ const config = {
       },
       announcementBar: {
         id: "announcementBar-10", // Increment on change
-        //content: '<b><a href="/111/下學期/2023-03-22%20Nuxt">3/23 Nuxt3</a></b>',
-        content: '<b><a href="/111/Sunday/2023-03-26%20docker-network">3/26 研討會</a></b>',
+        content: '<b><a href="/111/下學期/2023-03-29%20Nuxt3-1">3/29 Nuxt3</a></b>',
+        //content: '<b><a href="/111/Sunday/2023-03-26%20docker-network">3/26 研討會</a></b>',
         isCloseable: true,
       },
       algolia: {
