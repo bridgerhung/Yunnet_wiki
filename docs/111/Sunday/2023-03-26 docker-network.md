@@ -6,7 +6,7 @@ Date: 2023/03/26
 ---
 
 :::info 作者資料
-[原始 MD by 佑民](https://hackmd.io/@ji03mmy18/r1tQWCXx2#/)
+[原始 MD by 祐民](https://hackmd.io/@ji03mmy18/r1tQWCXx2#/)
 :::
 
 
