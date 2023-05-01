@@ -123,8 +123,9 @@ const config = {
       },
       announcementBar: {
         id: "announcementBar-11", // Increment on change
-        content: '<b><a href="/111/下學期/2023-04-28%20CSS%20selector">4/26 CSS</a></b>',
-        //content: '<b><a href="/111/Sunday/2023-03-26%20docker-network">3/26 研討會</a></b>',
+        //content: '<b><a href="/111/下學期/2023-04-28%20CSS%20selector">4/26 CSS</a></b>',
+        content:
+          '<b><a href="/111/Sunday/2023-04-30%20GCP%20BigQuery">4/30 研討會</a></b>',
         isCloseable: true,
       },
       algolia: {
