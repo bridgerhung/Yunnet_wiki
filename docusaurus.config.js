@@ -123,7 +123,7 @@ const config = {
       },
       announcementBar: {
         id: "announcementBar-12", // Increment on change
-        content: '<b><a href="/111/下學期/2023-05-17%20backend">5/4 後端1 </a></b>',
+        content: '<b><a href="/111/下學期/2023-05-17%20backend">5/17 後端1 </a></b>',
         //content: '<b><a href="/111/Sunday/2023-05-07%20SSH_SCP">5/8 研討會</a></b>',
         isCloseable: true,
       },
