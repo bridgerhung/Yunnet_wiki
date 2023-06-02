@@ -87,9 +87,10 @@ Serverless Dataware house
 ## Implementation Google Cloud Arcade 
 
 由於 GCP 很貴又需要 Credit Card 我們不實際讓各位使用自己的錢包來體驗
-因此準備了 Google Cloud Arcade
+因此準備了 Google Cloud Arcade  
 
-[Link Analyze BigQuery Data in Connected Sheets](https://go.qwiklabs.com/arcade) Level2
+[Link Analyze BigQuery Data in Connected Sheets](https://go.qwiklabs.com/arcade)  
+Level2  
 [BigQuery: Qwik Start - Console Quest](https://www.cloudskillsboost.google/games/3949)
 
 ---
@@ -97,8 +98,8 @@ Serverless Dataware house
 ## 最後!別跑乖乖聽好工商時間
 
 
-[COSCUP 官網](https://coscup.org/2023/zh-TW/landing)
-[給我起來投稿](https://blog.coscup.org/2023/04/coscup-2023-coscup-2023-call-for.html?_gl=1%2A1yk1k4c%2A_ga%2ANDY2NDY1NTI3LjE2NzcxNjQxNTk.%2A_ga_C9EMTMDSS1%2AMTY4MjgyODIxOS4zMC4xLjE2ODI4MjgyNDMuMC4wLjA.)
-[學生社群大亂鬥官網](https://sitcon.org/2023)
-[最後幫我分享他](https://www.instagram.com/p/CrStGx2LZBD/)
-[還有分享他](https://www.facebook.com/SITCONtw/posts/pfbid0uSeK7tcJ3Bs9sHokqimVKxaZwe9YZ17JLLxmTiG56ioBnJK5REXYFjgDu233LvvCl)
+[COSCUP 官網](https://coscup.org/2023/zh-TW/landing)  
+[給我起來投稿](https://blog.coscup.org/2023/04/coscup-2023-coscup-2023-call-for.html?_gl=1%2A1yk1k4c%2A_ga%2ANDY2NDY1NTI3LjE2NzcxNjQxNTk.%2A_ga_C9EMTMDSS1%2AMTY4MjgyODIxOS4zMC4xLjE2ODI4MjgyNDMuMC4wLjA.)  
+[學生社群大亂鬥官網](https://sitcon.org/2023)  
+[最後幫我分享他](https://www.instagram.com/p/CrStGx2LZBD/)  
+[還有分享他](https://www.facebook.com/SITCONtw/posts/pfbid0uSeK7tcJ3Bs9sHokqimVKxaZwe9YZ17JLLxmTiG56ioBnJK5REXYFjgDu233LvvCl)  

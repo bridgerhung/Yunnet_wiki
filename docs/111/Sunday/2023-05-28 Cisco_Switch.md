@@ -61,8 +61,8 @@ tags: [祐民]
 
 |                 Mode | Photo                                               |
 | --------------------:| --------------------------------------------------- |
-|       User EXEC Mode | ![](https://hackmd.io/_uploads/HJ9fHh18n.png =400x) |
-| Privileged EXEC Mode | ![](https://hackmd.io/_uploads/S1GESnJIn.png =400x) |
+|       User EXEC Mode | ![](https://hackmd.io/_uploads/HJ9fHh18n.png)  |
+| Privileged EXEC Mode | ![](https://hackmd.io/_uploads/S1GESnJIn.png)  |
 
 ----
 
@@ -70,8 +70,8 @@ tags: [祐民]
 
 | Command | Photo                                               |
 | -------:| --------------------------------------------------- |
-|  enable | ![](https://hackmd.io/_uploads/ryVLv3yL2.png =400x) |
-|    exit | ![](https://hackmd.io/_uploads/SJuKP3y8n.png =400x) |
+|  enable | ![](https://hackmd.io/_uploads/ryVLv3yL2.png)  |
+|    exit | ![](https://hackmd.io/_uploads/SJuKP3y8n.png)  |
 |         |                                                     |
 
 ----
