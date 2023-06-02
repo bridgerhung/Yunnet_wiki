@@ -2,6 +2,7 @@
 title:  JavaScript
 sidebar_position: 6
 description: JavaScript
+tags: [琦龍]
 ---
 
 :::info

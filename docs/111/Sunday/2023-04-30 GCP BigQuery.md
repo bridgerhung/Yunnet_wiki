@@ -3,6 +3,7 @@ title: GCP餐點-企業級巨量資料庫 BigQuery
 sidebar_position: 12
 description: GCP餐點-企業級巨量資料庫 BigQuery
 Date: 2023/04/30
+tags: [綱庭]
 ---
 :::info 作者資料
 [原始 MD by 綱庭](https://hackmd.io/@fan9704/SJABMvomn)

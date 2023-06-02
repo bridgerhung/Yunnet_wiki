@@ -3,6 +3,7 @@ title: CI/CD 初體驗
 sidebar_position: 13
 description: CI/CD 初體驗
 Date: 2023/04/30
+tags: [祐民]
 ---
 :::info 作者資料
 [原始 MD by 祐民](https://hackmd.io/@ji03mmy18/rknWELoXh#/)

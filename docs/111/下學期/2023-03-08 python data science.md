@@ -3,6 +3,7 @@ title: Python資料科學
 sidebar_position: 2
 description: Python資料科學 
 Date: 2023/03/08
+tags: [琦龍]
 ---
 
 :::info 作者資料

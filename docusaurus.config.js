@@ -104,12 +104,15 @@ const config = {
             position: "left",
             label: "往年社團課程",
           },
+          {to: '/tags', label: '作者標籤', position: 'left'},
           {
             type: "doc",
             docId: "announcement/官方文檔",
             position: "left",
             label: "官方文檔",
-          },
+          }
+          
+          
         ],
       },
       footer: {

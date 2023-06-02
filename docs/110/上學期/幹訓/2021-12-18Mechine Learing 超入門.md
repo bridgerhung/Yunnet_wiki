@@ -2,6 +2,7 @@
 title:  Mechine Learing 
 sidebar_position: 4
 description: Mechine Learing 
+tags: [咏陞]
 ---
 
 :::info

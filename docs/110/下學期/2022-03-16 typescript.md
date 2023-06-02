@@ -2,6 +2,7 @@
 title: typescript
 sidebar_position: 3
 description: typescript
+tags: [咏陞]
 ---
 
 :::info
