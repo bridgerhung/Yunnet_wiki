@@ -127,7 +127,7 @@ const config = {
       announcementBar: {
         id: "announcementBar-12", // Increment on change
         //content: '<b><a href="/111/Sunday/2023-05-28%20Cisco_Switch">5/28 交換器 </a></b>',
-        content: '<b><a href="/111/下學期/2023-05-31%20GAS_Excel">5/31 Excel & Google App Script</a></b>',
+        content: '<b><a href="/111/下學期/2023-06-07%20summary">111本學年總回顧</a></b>',
         isCloseable: true,
       },
       algolia: {
