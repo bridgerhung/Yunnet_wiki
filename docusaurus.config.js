@@ -80,23 +80,19 @@ const config = {
           src: "img/logo.svg",
         },
         items: [
+          /*
           {
             type: "doc",
             docId: "/category/宿舍網路",
             position: "left",
             label: "宿舍網路",
           },
+          */
           {
             type: "doc",
-            docId: "/category/下學期社團課程資料",
+            docId: "/category/112上學期社團課程資料",
             position: "left",
             label: "社團課程",
-          },
-          {
-            type: "doc",
-            docId: "/category/周末研討會",
-            position: "left",
-            label: "周末研討會",
           },
           {
             type: "doc",

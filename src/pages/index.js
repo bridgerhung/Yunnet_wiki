@@ -23,7 +23,8 @@ function HomepageHeader() {
           </Link>
         </div>
         <div><h1> </h1></div>
-        <div className={styles.buttons}>
+        
+        <div className={styles.buttons}> 
           <Link
             className="button button--secondary button--lg"
             to="/category/周末研討會"
@@ -31,6 +32,7 @@ function HomepageHeader() {
             🐱‍🏍周末研討會
           </Link>
         </div>
+        
       </div>
     </header>
   );
