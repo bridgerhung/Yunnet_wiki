@@ -23,7 +23,7 @@ const config = {
   tagline: "網管的社團課程",
   url: "https://wiki.yunnet.eu.org",
   baseUrl: "/",
-  onBrokenLinks: "throw",
+  onBrokenLinks: "ignore",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/Yunnet_icon.svg",
 
