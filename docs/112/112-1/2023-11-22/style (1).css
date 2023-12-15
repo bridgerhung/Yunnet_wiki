@@ -1,0 +1,36 @@
+/* Tag Selector */
+li {
+    font-weight: bold;
+}
+/* Class Selector */
+.done {
+    text-decoration: line-through;
+}
+/* Descendant Selector */
+li a {
+    color: red;
+}
+/* Attribute Selector */
+a[href*="google"] {
+    color: yellow;
+}
+/* Pseudo Classes */
+/* 滑鼠移上去會變顏色 */
+a:hover {
+    color: black;
+}
+
+li:nth-child(3) {
+    color: blue;
+}
+/* Pseudo Elements */
+p::first-letter {
+    font-size: 200%;
+}
+h1::before {
+    content: url("https://memeprod.ap-south-1.linodeobjects.com/user-maker/190d2abfc32d18ecba34c105f5472930.gif");
+}
+
+#sec-2{
+    color: green;
+}

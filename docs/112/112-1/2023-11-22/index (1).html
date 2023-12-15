@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Website</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <!-- CSS Selector -->
+
+        <style>
+            /* Class Selector */
+            .title {
+                margin-top: 10px;
+                margin-bottom: 10px;
+                font-weight: bold;
+                font-size: 24px;
+            }
+
+            .content {
+                width: 400px;
+                padding: 10px;
+                border: 1px dashed blue;
+                color: #666666;
+            } 
+            
+            .keyword {
+                color: red;
+            }
+            
+            /* ID Selector */
+            #title1 {
+                text-decoration: underline;
+            }
+            #title2 {
+                text-decoration: line-through;
+            }
+
+
+        </style>
+
+        <h1>Selector選擇器</h1>
+        <div id="title1" class="title">文章第一段落的標題</div>
+        <div class="content">
+            今天<span class="keyword">天氣</span>真好
+        </div>
+        <div id="title2" class="title">文章第一段落的標題</div>
+        <div class="content">
+            今天<span class="keyword">天氣</span>真好
+        </div>
+
+        <hr>
+        <h1>TODO</h1>
+        <ul>
+            <li class="done">TODO 1
+                <p>Lorem <a href="https://google.com">Google</a> ipsum, dolor sit amet consectetur adipisicing elit. Expedita maiores quo est asperiores earum accusantium dignissimos cumque inventore commodi. Consequatur unde illo beatae amet aliquam placeat commodi ut. Nam, tempora?</p>
+            </li>
+            <li id="sec-2" class="done">TODO 2
+                <p>Lorem <a href="https://apple.com">Apple</a> ipsum dolor sit amet consectetur adipisicing elit. Quisquam ut, nulla perferendis vitae ex voluptates. Perferendis repellat quas voluptas quibusdam inventore vero quasi iure, similique illum laboriosam eius quis deserunt.</p>
+            </li>
+            <li>TODO 3
+                <p>Lorem <a href="https://google.com">Google</a> ipsum dolor sit amet consectetur adipisicing elit. Illum ipsa harum itaque asperiores, ea repellendus quis voluptate numquam repudiandae obcaecati hic et quasi excepturi dolorum eaque reprehenderit voluptas, vero soluta?</p>
+            </li>
+        </ul>
+
+        <!-- CSS Layout -->
+
+        <div id="container">
+            <div class="float">P1: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt magnam nesciunt repellat reprehenderit repudiandae? Vel id modi reprehenderit eveniet ullam, nemo, rerum iure officia dolorem exercitationem voluptatibus illum nesciunt expedita.</div>
+            <div id="sec2" class="float">P2: Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae ipsa labore facilis unde necessitatibus illum sapiente dolorem facere est accusantium? Esse, nemo debitis quae nesciunt aspernatur repellendus vero dolore explicabo?</div>
+            <div class="float">P3: Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi tenetur hic, nemo corrupti totam aliquid aspernatur fugit id incidunt iusto vero architecto obcaecati excepturi alias odio quae odit porro earum!</div>
+        </div>
+
+        <p class="paragraph">Lorem ipsum <span>2em</span> dolor sit amet consectetur adipisicing elit. Assumenda asperiores possimus impedit, cumque quaerat, labore nesciunt numquam fugiat hic ullam alias reprehenderit libero ad ea accusantium explicabo quibusdam molestiae aperiam.</p>
+
+        <style>
+            #container div{
+                border: 0.25rem solid green;
+                margin: 1rem;
+
+                width: 20rem;
+            }
+            #container::after{
+                content: "";
+                display: block;
+                clear: both;
+            }
+            .float{
+                float: left;
+            }
+
+            #sec2{
+                /* position: fixed; */
+                /* position: absolute; */
+                top: 1rem;
+                right: 1rem;
+            }
+
+            p.paragraph{
+                border: 4px solid blue;
+                margin: 4px;
+
+                text-align: center;
+                width: 50%;
+                /* max-width: 400px;
+                min-width: 200px; */
+            }
+
+            span{
+                font-size: 2em;
+            }
+        </style>
+    </body>
+
+</html>

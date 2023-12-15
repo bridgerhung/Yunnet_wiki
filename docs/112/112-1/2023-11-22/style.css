@@ -1,0 +1,36 @@
+.left{
+    flex:none;
+    width: 200px;
+}
+.right{
+    flex: auto;
+    width: 30%;
+    
+    display: flex;
+    justify-content: flex-end;
+}
+.frame{
+    display: flex;
+}
+.item{
+    width: 70px;
+    margin-right: 10px;
+    text-align: center;
+}
+.welcome{
+    height: 300px;
+    background: #cccccc;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.text{
+    width: 300px;
+    height: 40px;
+    font-size: 30px;
+    font-weight: bold;
+
+    background-color: dodgerblue;
+    text-align: center;
+}
