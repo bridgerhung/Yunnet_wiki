@@ -65,7 +65,8 @@ sudo (指令）
 指令格式：
 rm [-r移除整個資料夾 / f強制進行移除] (路徑）
 ```
-![rm_rf_meme](https://img-blog.csdnimg.cn/img_convert/a4271477c97e77bbfa84cd317ff1c87f.png?x-oss-process=image/resize,m_fixed,h_150 =200%x)
+![rm_rf_meme](https://img-blog.csdnimg.cn/img_convert/a4271477c97e77bbfa84cd317ff1c87f.png?x-oss-process=image/resize,m_fixed,h_150)  
+
 ###### (圖片來源：img-blog.csdnimg.cn)
 
 ---
@@ -151,7 +152,7 @@ nano (檔案路徑)
 指令格式：
 chmod [-R] (神奇數字或參數) (檔案路徑）
 ```
-![rwx-explanation](https://www.runoob.com/wp-content/uploads/2014/08/file-permissions-rwx.jpg =75%x)
+![rwx-explanation](https://www.runoob.com/wp-content/uploads/2014/08/file-permissions-rwx.jpg)
 ##### (圖片來源：www.runoob.com)
 
 (-R是用在要一次改掉一個資料夾下的所有檔案權限時)

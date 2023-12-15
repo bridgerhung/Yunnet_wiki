@@ -33,7 +33,7 @@ tags: [宥丞]
 ----
 
 ### 什麼是 Git 
-&lt;br&gt;
+
 
 - 版本管理工具
 - 分支管理
@@ -55,7 +55,7 @@ Ubuntu 安裝方式
 sudo apt update #更新系統
 sudo apt install git
 ```
-&lt;br&gt;
+
 
 測試看看有沒有成功裝上
 ```bash=
@@ -86,7 +86,7 @@ git --version
 
 ----
 
-### Master &amp; Branch
+### Master &Branch
 
 ----
 
@@ -101,9 +101,9 @@ Branch(分支)，在某些情況下使用
 ----
 
 ```bash=
-cd &lt;資料夾名稱&gt; # 到想要執行的資料夾內
+cd 資料夾名稱; # 到想要執行的資料夾內
 code .          # 開啟 VScode
-&lt; crtl + ` &gt;    # 在 VScode開啟終端機
+ crtl + ` ;    # 在 VScode開啟終端機
 git init        # 初始化 git
 ```
 
@@ -112,8 +112,8 @@ git init        # 初始化 git
 ### 設定 config 內容
 
 ```bash=
-git config --global user.name &#34;&lt;名字&gt;&#34;
-git config --global user.email &lt;Email&gt;
+git config --global user.name 名字;
+git config --global user.email Email;
 ```
 
 ----
@@ -126,7 +126,7 @@ git config --global user.email &lt;Email&gt;
 ```git=
 git status
 ```
-&lt;br&gt;
+
 
 ![](https://drive.google.com/uc?id=14MefbqUM73Y8sZj5WocW8r7ddPCG31Ve&amp;export)
 以下範例是尚未追蹤到的檔案 (index.html)
@@ -134,7 +134,7 @@ git status
 ----
 
 ### 追蹤檔案
-`git add &lt;檔案名稱&gt;`
+`git add 檔案名稱;`
 ```git=
 git add index.html
 ```
@@ -143,7 +143,7 @@ git add index.html
 git add .  #追蹤所有檔案
 git add -A #追蹤所有檔案
 ```
-&lt;br&gt;
+
 
 ![](https://drive.google.com/uc?id=14OfbMW8Dm-XO_ekj_JYRnE-ByyZkBN-y&amp;export)
 已追蹤但尚未提交版本 (index.html)
@@ -151,10 +151,10 @@ git add -A #追蹤所有檔案
 ----
 
 ### 取消追蹤
-&lt;br&gt;
+
 
 如果想要取消追蹤
-可以利用 `git restore &lt;檔案名稱&gt;`
+可以利用 `git restore 檔案名稱;`
 ```git=
 git restore index.html
 ```
@@ -162,9 +162,9 @@ git restore index.html
 ----
 
 ### 提交版本
-`git commit -m &#34;&lt;版本說明&gt;&#34;`
+`git commit -m "<版本說明>";`
 ```git=
-git commit -m &#34;新增標題&#34;
+git commit -m "新增標題"
 ```
 
 ----
@@ -173,9 +173,9 @@ git commit -m &#34;新增標題&#34;
 利用 `git commit --amend -m` 
 修改 commit 訊息
 ```git=
-git commit --amend -m  &#34;修改標題&#34;
+git commit --amend -m  "修改標題"
 ```
-&lt;br&gt;
+
 
 若已經 commit 完但想要再新增檔案到同個版本
 ```git=
@@ -190,7 +190,7 @@ git commit --amend --no-edit  #不修改訊息直接新增檔案
 ----
 
 ### 撤銷 commit 
-&lt;br&gt;
+
 
 可以利用 `git reset` 取消修改
 ```git=
@@ -214,17 +214,12 @@ HEAD 實際上就是一個指針，指向當前的節點
 利用 `git log` 可以查看歷史版本紀錄，內容包括
 
 
-&lt;div style=&#34;display: flex&#34;&gt;
-    &lt;div&gt;
-        &lt;ul&gt;
-            &lt;li&gt;commit ID(hash)&lt;/li&gt;
-            &lt;li&gt;提交作者&lt;/li&gt;
-            &lt;li&gt;提交日期&lt;/li&gt;
-            &lt;li&gt;提交訊息&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-    &lt;img src=https://drive.google.com/uc?id=14UCS0ve6yO96XHcHa33p00Mcj_lK-yGT&amp;export width=500 style=&#34;display: block; margin-left: 20px&#34;&gt;
-&lt;/div&gt;
+*commit ID(hash)
+*提交作者
+*提交日期
+*提交訊息
+![](https://drive.google.com/uc?id=14UCS0ve6yO96XHcHa33p00Mcj_lK-yGT&amp;export)
+
 
 [更多 git log 用法](https://chat.openai.com/share/1b4bc600-7bf7-4002-95c6-8abbad24827b)
 
@@ -240,7 +235,7 @@ HEAD 實際上就是一個指針，指向當前的節點
 ----
 
 ### 移動 HEAD
-利用 `git switch &lt;分支名稱&gt;` 
+利用 `git switch 分支名稱;` 
 可以切換 HEAD 到不同的分支
 
 ```git=
@@ -255,7 +250,7 @@ git switch master  #移到到主線上
 
 ----
 
-也可以利用 `git switch -d &lt;commit ID&gt;` 
+也可以利用 `git switch -d commit ID;` 
 將 HEAD 移到指定的版本上
 ```git=
 git log --oneline
@@ -284,15 +279,15 @@ git log --oneline
 ----
 
 ### 新增分支
-利用 `git branch &lt;分支名稱&gt;` 創建一個分支
-並利用 `git switch &lt;分支名稱&gt;` 指向新分支
+利用 `git branch 分支名稱;` 創建一個分支
+並利用 `git switch 分支名稱;` 指向新分支
 ```git=
 git branch dev
 git switch dev  #將 HEAD 移到分支上
 ```
-&lt;br&gt;
 
-也可以直接利用 `git switch -c &lt;分支名稱&gt;` 
+
+也可以直接利用 `git switch -c 分支名稱;` 
 新增分支並將 HEAD 指向新分支
 ```git=
 git switch -c dev  #新增分支並移到分支上
@@ -302,23 +297,23 @@ git switch -c dev  #新增分支並移到分支上
 
 ### 修改分支名稱
 ```git=
-git branch -m &lt;舊名稱&gt; &lt;新名稱&gt;
+git branch -m 舊名稱; 新名稱;
 ```
 
 ----
 
 ### 刪除分支
-&lt;br&gt;
+
 
 較安全的刪除
 ```git=
-git branch -d &lt;分支名稱&gt;
+git branch -d 分支名稱;
 ```
-&lt;br&gt;
+
 
 強制刪除
 ```git=
-git branch -D &lt;分支名稱&gt;
+git branch -D 分支名稱;
 ```
 
 [-d 與 -D 的差別](https://chat.openai.com/share/024c1d91-7918-4ec8-bb1f-60ea5cc92494)
@@ -328,7 +323,7 @@ git branch -D &lt;分支名稱&gt;
 ### 撤銷刪除分支
 可以利用 `git reflog` 
 查看被刪除前的 commit hash
-再利用 `git branch &lt;分支名稱&gt; &lt;hash值&gt;` 還原
+再利用 `git branch 分支名稱; hash值;` 還原
 ```bash=
 git reflog
 git branch dev 88961cc
@@ -340,7 +335,7 @@ git branch dev 88961cc
 
 如果想要讓 master 繼續為主線
 則需要先 switch 到 master 上
-再利用 `git merge &lt;分支名稱&gt;` 合併
+再利用 `git merge 分支名稱;` 合併
 
 ----
 
@@ -358,7 +353,7 @@ git merge dev
 ----
 
 如果想要保留支線的合併紀錄
-則可以利用 `git merge &lt;分支名稱&gt; --no-ff`
+則可以利用 `git merge 分支名稱; --no-ff`
 
 ```git=
 git merge dev --no-ff
@@ -394,7 +389,7 @@ git merge --abort #取消合併
 
 ### 濃縮多個 commit
 
-可以利用 `git rebase -i HEAD~&lt;數字&gt;` 
+可以利用 `git rebase -i HEAD~數字;` 
 將指定數量的 commit 濃縮在一起
 
 ```git=
@@ -404,7 +399,7 @@ git rebase -i HEAD~3 #將HEAD的前3個commit合併在一起
 
 ----
 
-若要把 HEAD~3 &amp; HEAD~2 合併到 HEAD~1
+若要把 HEAD~3 &HEAD~2 合併到 HEAD~1
 需要把 2、3 的 pick 改成 squash
 
 - pick: 保留
@@ -426,7 +421,7 @@ git rebase -i HEAD~3 #將HEAD的前3個commit合併在一起
 
 順利的話就會完成合併
 ![](https://drive.google.com/uc?id=1538NGtrJpeDUSilGxZq0kW52R_1yd7LW)
-&lt;br&gt;
+
 
 如果有衝突的話就解決
 並加上 `git add .` 與 `git rebase --continue`
@@ -452,15 +447,7 @@ git rebase dog
 ![](https://drive.google.com/uc?id=158r9kCvydkvntVFoXakJ6yZPc-3UtU9r)
 
 ----
-
-&lt;div style=&#34;display: flex; align-items: center&#34;&gt;
-    &lt;div&gt;
-        &lt;img src=https://drive.google.com/uc?id=156hUwml-ooDu8jkcekCOI9dj_y6_Le6o width=500 style=&#34;display: flex; margin-left: 20px;&#34;&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-        &lt;img src=https://drive.google.com/uc?id=158r9kCvydkvntVFoXakJ6yZPc-3UtU9r width=500 style=&#34;display: flex; margin-left: 20px&#34;&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+|![](https://drive.google.com/uc?id=156hUwml-ooDu8jkcekCOI9dj_y6_Le6o)|![](https://drive.google.com/uc?id=158r9kCvydkvntVFoXakJ6yZPc-3UtU9r)| 
 
 ----
 
@@ -560,7 +547,7 @@ ssh-keygen
 
 ### 印出自己的公鑰資訊
 
-&lt;br/&gt;
+br/;
 
 ```bash=
 more ~/.ssh/id_rsa.pub
@@ -577,7 +564,7 @@ more ~/.ssh/id_rsa.pub
 
 按下『Add SSH key』後，新增就完成了
 
-&gt; 若使用者名稱是中文，請幫紀錄加上英文的Title，避免新增失敗！
+; 若使用者名稱是中文，請幫紀錄加上英文的Title，避免新增失敗！
 
 ----
 
@@ -590,7 +577,7 @@ more ~/.ssh/id_rsa.pub
 ----
 
 ### 建立一個儲存庫
-首頁右上角頭像 -&gt; repository -&gt; New
+首頁右上角頭像 -; repository -; New
 ![](https://drive.google.com/uc?id=15Fs7AQbVtuWXa9Hfkyy37pMtLs5CZ9fp)
 
 ----
@@ -604,7 +591,7 @@ more ~/.ssh/id_rsa.pub
 ![](https://imgur.com/uHd9W9U.png)
 
 ```shell=
-git remote add origin &lt;repo url&gt;
+git remote add origin repo url;
 ```
 
 ----
@@ -629,7 +616,7 @@ git push origin main
 
 ![](https://drive.google.com/uc?id=1-9FnLyTGm99rb_an2lFbQHjQsTrky-3n)
 ```bash=
-git clone &lt;儲存庫位置&gt;
+git clone 儲存庫位置;
 ```
 ![](https://drive.google.com/uc?id=1-B3YuuX6-A-ZacP3ZbFLI98enVivLww6)
 
@@ -654,7 +641,7 @@ git pull
 
 學習最快的方法就是直接練習
 在寫程式作業或是開發時
-都可以用用看 Git &amp; GitHub
+都可以用用看 Git &GitHub
 是真的好用 👍
 
 ----
