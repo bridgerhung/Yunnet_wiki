@@ -123,7 +123,7 @@ const config = {
       announcementBar: {
         id: "announcementBar-12", // Increment on change
         //content: '<b><a href="/111/Sunday/2023-05-28%20Cisco_Switch">5/28 交換器 </a></b>',
-        content: '<b><a href="/112/112-1/2023-12-13 docker">docker</a></b>',
+        content: '<b><a href="/112/112-1/2023-12-20 docker2_0">docker 2.0</a></b>',
         isCloseable: true,
       },
       algolia: {
