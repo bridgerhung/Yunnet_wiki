@@ -90,7 +90,7 @@ const config = {
           */
           {
             type: "doc",
-            docId: "/category/112上學期社團課程資料",
+            docId: "/category/112下學期社團課程資料",
             position: "left",
             label: "社團課程",
           },
@@ -100,15 +100,13 @@ const config = {
             position: "left",
             label: "往年社團課程",
           },
-          {to: '/tags', label: '作者標籤', position: 'left'},
+          { to: "/tags", label: "作者標籤", position: "left" },
           {
             type: "doc",
             docId: "announcement/官方文檔",
             position: "left",
             label: "官方文檔",
-          }
-          
-          
+          },
         ],
       },
       footer: {
@@ -123,7 +121,8 @@ const config = {
       announcementBar: {
         id: "announcementBar-12", // Increment on change
         //content: '<b><a href="/111/Sunday/2023-05-28%20Cisco_Switch">5/28 交換器 </a></b>',
-        content: '<b><a href="/112/112-1/2023-12-20 docker2_0">docker 2.0</a></b>',
+        content:
+          '<b><a href="/112/112-1/2023-12-20 docker2_0">docker 2.0</a></b>',
         isCloseable: true,
       },
       algolia: {
