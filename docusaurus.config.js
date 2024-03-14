@@ -122,7 +122,7 @@ const config = {
         id: "announcementBar-12", // Increment on change
         //content: '<b><a href="/111/Sunday/2023-05-28%20Cisco_Switch">5/28 交換器 </a></b>',
         content:
-          '<b><a href="/111/上學期/2022-10-05%20WSL%20安裝/套件">WSL套件 損壞連結已經更新</a></b>',
+          '<b><a href="112/112-2/2024-03-06%20JS">03-06JavaScript</a></b>',
         isCloseable: true,
       },
       algolia: {
