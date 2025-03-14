@@ -118,13 +118,13 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
-      announcementBar: {
-        id: "announcementBar-12", // Increment on change
-        //content: '<b><a href="/111/Sunday/2023-05-28%20Cisco_Switch">5/28 交換器 </a></b>',
-        content:
-          '<b><a href="/112/112-2/2024-03-27%20cookie%20and%20session">餅乾開會</a></b> <b><a href="112/112-1/2023-09-20%20Cisco%202960%20X">&nbsp;&nbsp; Cisco 2960 X</a></b>',
-        isCloseable: true,
-      },
+      // announcementBar: {
+      //   id: "announcementBar-12", // Increment on change
+      //   //content: '<b><a href="/111/Sunday/2023-05-28%20Cisco_Switch">5/28 交換器 </a></b>',
+      //   content:
+      //     '<b><a href="/112/112-2/2024-03-27%20cookie%20and%20session">餅乾開會</a></b> <b><a href="112/112-1/2023-09-20%20Cisco%202960%20X">&nbsp;&nbsp; Cisco 2960 X</a></b>',
+      //   isCloseable: true,
+      // },
       algolia: {
         appId: "EVWC1N1L17",
         apiKey: "bb9b2ce400d51545652321fd5efcd8c0",
